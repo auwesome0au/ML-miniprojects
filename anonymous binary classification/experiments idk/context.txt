@@ -1,0 +1,1093 @@
+PROJECT CONTEXT — Week 03: Hidden Pairs
+Updated: 2026-09-19
+Workspace: /home/outofdanger/projects/week_03_lab
+
+USER WORKFLOW AND SCOPE
+- Discuss proposed work and obtain the user's approval before implementation
+  or training. Permission for one step does not approve later experiments.
+- Use train.csv and validation.csv ONLY for the baseline work.
+- Never combine validation with training. Do not read test.csv for this work.
+- The user authorized creating this context.txt first, then explicitly approved
+  the proposed shared preprocessing design with "yes, I do".
+- That approval covers implementing and verifying preprocessing.py for the
+  decision tree, random forest, and boosting baselines.
+- The user subsequently approved creating and running decision_tree.py with
+  the proposed depth-3 tree, evaluation, and saved interpretation artifacts.
+- The user then explicitly approved working on random forest and XGBoost,
+  asking for a better boosting alternative to be proposed before proceeding
+  if appropriate. Explained that XGBoost is a reasonable choice, but cannot
+  be called best without validation evidence; no alternative was substituted.
+- Announced a fixed XGBoost baseline (100 depth-3 trees, learning rate 0.05)
+  before implementation. Both ensemble baselines have now been completed.
+- Further tuning, model changes, or test/submission work require discussion.
+- The user subsequently requested analysis of training data for imbalance and
+  other potential problems before enhancing the existing pipelines. Completed
+  a train-only descriptive audit; no model or preprocessing changes were made.
+- 2026-09-19: the user asked for analysis of the existing pipeline and
+  proposals to improve the metric, with no modifications. Read-only checks
+  ran from a temporary session directory; no project file changed and no
+  model was fitted.
+- The user then supplied screenshots of competition rules Sections 4-8,
+  asked for a compliance check of the existing infrastructure and of the
+  proposals, and asked for all new findings to be added to this file.
+  That request covered editing context.txt only. No implementation,
+  training, or experiment had been approved at that point.
+- 2026-09-19: the user approved running the proposed experiments that do
+  not violate the rules, in a new .py file, and asked for every change to be
+  explained in this file. experiments.py was created for this; its results
+  are recorded in the experiments section once the full run completes.
+- The user then asked for a .py file that generates a submission for the
+  current solution. That approved reading test.csv and sample_submission.csv
+  for prediction and file-format checks only. Uploading is the user's action.
+- After a first upload scored 0.50000, the user uploaded the generated
+  file and reported the result as fine. The user then asked for everything
+  to be documented here and for a work plan to improve the metric. The
+  plan is a proposal only; each step needs approval before it runs.
+- The user then ruled that only decision trees, random forests and
+  gradient boosting may be used; linear and other non-tree models are not
+  allowed. The Section 4 screenshot lists other standard tabular models
+  as allowed, but this stricter ruling takes precedence for all work.
+- The user approved the tree-only work plan, including HistGradientBoosting
+  and equal-weight averages of forest and boosting ("go on with
+  experiments, i approve"). The user then asked for a rules check of the
+  new options, a submission file for the new pipeline, and full
+  documentation here. Uploading remains the user's action.
+- The user uploaded the round-1 average (public 0.91633) and asked for the
+  next submission. The user is not sure ExtraTrees is allowed and asked
+  for other ways to improve round 1 (tuning, preprocessing). A round-3
+  plan was proposed; stopping round 2 and running round 3 await approval.
+- The user asked whether every step and outcome is documented here. Four
+  items were missing (round-2 phase 1, the ExtraTrees evidence, round-1
+  grid trends, the round-3 proposal) and were added on 2026-09-19.
+- The user approved round 3 ("Lets go on round 3"). As recommended,
+  round 2 was stopped in phase 4 and round 3 was started.
+
+PROBLEM AND COMPETITION REQUIREMENTS
+- Each row describes a pair of anonymous observations using numerical features.
+- target=1: the pair shares the same hidden identity; target=0: different identities.
+- Predict the probability of target=1. The local README specifies ROC-AUC as
+  the competition metric and row_id only for aligning predictions.
+- Competition screenshots say validation is separated from training at the
+  underlying-entity level. Preserve this split instead of a random row split.
+- Fit all learned preprocessing and models on train only. Validation is for
+  evaluation, configuration comparison, and selection.
+- The competition requires eventual comparison of a decision tree, random
+  forest, and gradient boosting. Begin with an interpretable decision tree.
+- Labels may contain noise. Approximately 10% is a conservative upper-bound
+  assumption, not a measured noise rate or justification for deleting rows.
+- Anonymous feature names allow explanation of split rules, but not reliable
+  claims about their real-world meaning or feature-generation procedure.
+
+COMPETITION RULES — SECTIONS 4-8 (SCREENSHOTS SUPPLIED 2026-09-19)
+- Parts of Sections 6-8 were cut off at the right edge or bottom of the
+  screenshots. Wording below is kept only where the meaning is clear.
+Section 4, allowed methods:
+- Standard CPU-compatible tabular ML methods are allowed. Every final
+  report must compare at least a decision tree, a random forest, and a
+  gradient-boosting model. Other standard tabular models and ensembles
+  are allowed.
+- The supplied precomputed features may be used. Prohibited: external
+  datasets, labels or information about the hidden observations;
+  additional pretrained models, encoders, embeddings or downloaded model
+  weights; pre-fitted models or predictions from outside the team.
+- Fit every learned preprocessing step, feature-selection procedure and
+  model on train.csv only. Use validation.csv for evaluation,
+  hyperparameter selection and final model selection only. Do not retrain
+  on combined training and validation data.
+- Use test.csv only to generate predictions, never to fit preprocessing,
+  representations, feature selection, clustering or models.
+- User ruling, 2026-09-19: only decision trees, random forests and
+  gradient boosting are allowed in this project. It overrides the
+  "other standard tabular models" allowance above.
+Section 5, AI assistants:
+- Allowed. Students remain responsible for every line of submitted code
+  and must understand, reproduce and explain the solution. Every
+  computational step used to produce the submission must appear in the
+  submitted package. Chat histories are not required.
+Section 6, intended solution and prohibited conduct:
+- The intended task is learning a predictive relationship from the
+  supplied labeled examples. Prohibited: methods whose primary purpose is
+  to recover concealed information, exploit an unintended property of the
+  dataset or platform, or score without solving the intended problem.
+- Also prohibited: obtaining or reconstructing hidden targets or concealed
+  source information; manually editing test predictions using external
+  information; exploiting Kaggle, Moodle, scoring, file-format or API
+  vulnerabilities; multiple Kaggle accounts or circumventing submission
+  limits; exchanging code, engineered features, labels or predictions
+  between teams; making competition data or invitation links public.
+- Ordinary feature engineering and diagnostic analysis of the supplied
+  labeled data are allowed within the Section 4 roles. When it is unclear
+  whether a method solves the intended problem, ask the instructors first.
+Section 7, Kaggle submissions:
+- Metric: ROC-AUC. The public leaderboard is provisional feedback; final
+  ranking uses the private leaderboard after eligibility and
+  reproducibility checks.
+- At most five submissions per team per day. The team designates one
+  final submission and records it in the Moodle package; only that one
+  counts for assessment and bonuses.
+- Every submission must contain each test row_id exactly once and a
+  numeric target between 0 and 1. The final submission must be generated
+  by the team's submitted code; manual alteration is prohibited.
+Evaluation page (screenshot supplied 2026-09-19):
+- Test rows are split into a hidden public part, scored during the
+  competition, and a private part that decides the final ranking. Use the
+  validation set for model selection, not repeated public-leaderboard
+  results; a better public score may not improve the private score.
+- Submission file: exactly two columns, row_id and target. Include every
+  test row_id exactly once, unmodified, with no added or omitted rows. The
+  target is a numeric probability between 0 and 1, not a thresholded label.
+  Use the same column names and row order as sample_submission.csv and no
+  index or other columns.
+Section 8, Moodle deliverables and reproducibility (list cut off):
+- Each student submits the individual checkpoint through Moodle.
+- One designated member submits the team package. It must identify every
+  team member and contain the Kaggle team name, the member list with a
+  short contribution statement, the designated submission identifier or
+  filename, one executable notebook, and further items not visible in the
+  screenshot.
+
+FILES AND INSPECTION COMPLETED
+- Existing files: README.md, train.csv, validation.csv, test.csv,
+  sample_submission.csv, and a Python .venv directory.
+- At initial inspection, no project scripts or notebooks existed.
+- Read README.md and the supplied competition screenshots.
+- Inspected train.csv and validation.csv using read-only Python checks.
+- Did not open the contents of test.csv or sample_submission.csv.
+- Both labeled datasets have 514 columns: row_id, 512 numeric features
+  f0000 through f0511, and target. Column order matches across splits.
+- Train: 2,520 rows; 1,260 positives and 1,260 negatives.
+- Validation: 560 rows; 280 positives and 280 negatives.
+- Both datasets: no missing/nonfinite feature values, constant features,
+  duplicate feature rows, or duplicate row IDs.
+- No exact feature-row overlap or row-ID overlap between the splits.
+  These checks do not independently prove the absence of shared hidden entities.
+- Feature values observed: train range 0 to 10.0354376;
+  validation range 0 to 9.96500587.
+- row_id and target must not enter the feature matrix.
+
+ENVIRONMENT SETUP COMPLETED WITH USER AUTHORIZATION
+- Python environment: .venv, Python 3.12.3.
+- Installed numpy 2.5.3, pandas 3.0.6, scikit-learn 1.9.1,
+  matplotlib 3.11.2, and ipykernel 7.3.0, plus dependencies.
+- The package download initially failed under sandbox network restrictions;
+  installation succeeded after requesting network escalation.
+- Verified package imports, DecisionTreeClassifier, plot_tree, ROC-AUC,
+  and confusion-matrix imports. pip check in isolated mode passed.
+- The shell exposes external ROS packages to ordinary pip listing;
+  installation and dependency checking used Python -I for isolation.
+- No model was fitted as part of verification. No dataset was changed.
+- ipykernel provides notebook kernel support; no separate JupyterLab or
+  Notebook application was explicitly installed or configured.
+- Added xgboost-cpu 3.4.1 for the approved boosting baseline. The Python import
+  name is xgboost. This official CPU-only package avoids GPU dependencies.
+- Installation initially failed under sandbox network restrictions, then
+  succeeded via network escalation. Isolated pip check passed afterward.
+- Consulted official XGBoost installation, sklearn interface, and parameter
+  documentation:
+  https://xgboost.readthedocs.io/en/stable/install.html
+  https://xgboost.readthedocs.io/en/stable/python/sklearn_estimator.html
+  https://xgboost.readthedocs.io/en/stable/parameter.html
+
+FIRST DECISION-TREE EXPERIMENT — APPROVED AND COMPLETED
+- All 512 original features; no scaling or feature engineering.
+- DecisionTreeClassifier(max_depth=3, min_samples_leaf=30, random_state=42).
+- These settings were fixed before evaluation; no hyperparameter search ran.
+- Report train and validation ROC-AUC from predicted probabilities.
+- Supplement with accuracy and a confusion matrix at threshold 0.5.
+- Display the full tree with split rules, training sample counts, and
+  leaf probabilities; examine the train-validation performance gap.
+- Implemented as decision_tree.py at the user's request.
+- Run: .venv/bin/python decision_tree.py
+- Optional --data-dir and --output-dir arguments; defaults resolve relative
+  to the script directory. Rerunning replaces the three baseline artifacts.
+- Script imports do not load data, fit models, or write artifacts.
+- Training ROC-AUC: 0.790415; accuracy at probability >= 0.5: 0.731746.
+- Validation ROC-AUC: 0.747309; accuracy at probability >= 0.5: 0.696429.
+- Train minus validation ROC-AUC: 0.043106.
+- Confusion matrices, rows actual [0,1], columns predicted [0,1]:
+  train [[916,344],[332,928]]; validation [[197,83],[87,193]].
+- Actual tree: depth 3, 8 leaves, 15 nodes; leaf sample counts range 87–640.
+- Root split: f0289 <= approximately 0.492779.
+- Saved under outputs/decision_tree/:
+  metrics.json — metrics, full model parameters, package versions, feature
+                 names, and training leaf counts/probabilities;
+  tree_rules.txt — readable rules and training leaf probabilities;
+  tree.png — full tree diagram, node IDs, and training class counts.
+- Verified import safety, saved metric/count consistency, and leaf sizes;
+  visually inspected the tree diagram for legibility.
+- Initial artifact writing encountered a NumPy integer JSON serialization
+  error. Converted tree summary counts to Python ints and reran the same
+  approved configuration successfully. No tuning or configuration change.
+- Starter code appeared at the top of the script during work and caused data
+  loading on import. Its setup is covered by run_baseline; removed redundant
+  top-level setup and verified import safety again.
+- Training used train.csv only; validation was evaluated without fitting.
+  test.csv and sample_submission.csv remain unopened.
+
+RANDOM FOREST — APPROVED AND COMPLETED
+- random_forest.py uses the shared preprocessing and supplied split.
+- RandomForestClassifier: n_estimators=200, max_depth=3, min_samples_leaf=30,
+  max_features="sqrt", bootstrap=True, random_state=42, n_jobs=-1.
+- Matching tree depth and minimum leaf size provides a first comparison of
+  one tree with an ensemble of similarly constrained trees; no tuning ran.
+- Training ROC-AUC: 0.938828; accuracy at probability >= 0.5: 0.827381.
+- Validation ROC-AUC: 0.882946; accuracy at probability >= 0.5: 0.789286.
+- Train minus validation ROC-AUC: 0.055881.
+- Confusion matrices [[TN,FP],[FN,TP]]:
+  train [[1192,68],[367,893]]; validation [[262,18],[100,180]].
+- Artifacts in outputs/random_forest/: metrics.json, feature_importances.csv,
+  train_predictions.csv, validation_predictions.csv.
+- Forest importance is normalized mean decrease in impurity.
+
+XGBOOST — APPROVED AND COMPLETED
+- boosting.py uses XGBClassifier and the same preprocessing and split.
+- Fixed configuration: n_estimators=100, max_depth=3, learning_rate=0.05,
+  min_child_weight=1, subsample=1.0, colsample_bytree=1.0, reg_lambda=1.0,
+  reg_alpha=0.0, objective="binary:logistic", eval_metric="auc",
+  tree_method="hist", device="cpu", importance_type="gain",
+  random_state=42, n_jobs=4.
+- No eval_set was passed to fit, no early stopping or tuning was used.
+  Both labels and feature values used during fitting came from train only.
+- min_child_weight constrains Hessian sums; it is not equivalent to the
+  forest's minimum number of samples per leaf. These are initial model
+  configurations, not a comparison at identical effective model complexity.
+- Training ROC-AUC: 0.983777; accuracy at probability >= 0.5: 0.934127.
+- Validation ROC-AUC: 0.895510; accuracy at probability >= 0.5: 0.821429.
+- Train minus validation ROC-AUC: 0.088267.
+- Confusion matrices [[TN,FP],[FN,TP]]:
+  train [[1199,61],[105,1155]]; validation [[245,35],[65,215]].
+- Artifacts in outputs/boosting/: metrics.json, feature_importances.csv,
+  train_predictions.csv, validation_predictions.csv.
+- XGBoost importance is normalized average split gain. Importance scores
+  are model descriptions, not causal effects; the two ensemble importance
+  definitions should not be compared numerically across models.
+- An initial XGBoost run fitted successfully but report serialization failed
+  because its default missing-value parameter is NaN. The reporting helper now
+  stores this parameter as the string "NaN" in JSON metadata, without changing
+  model input or missing-value handling. Reran the same configuration and
+  successfully wrote all outputs. No tuning or model change was made.
+
+ENSEMBLE REPORTING AND VERIFICATION
+- Added baseline_reporting.py for shared ensemble metrics and artifacts.
+- ROC-AUC uses probabilities; accuracy and confusion matrices use >= 0.5.
+  This matches the decision-tree evaluation convention.
+- Predictions retain row_id, true target, probability_match, predicted_target.
+- Run commands: .venv/bin/python random_forest.py and
+  .venv/bin/python boosting.py. Each accepts --data-dir and --output-dir;
+  defaults are relative to the script directory. Reruns replace artifacts.
+- Both scripts and the reporting helper pass import-safety checks: no data
+  loading, fitting, or artifact writing occurs on import.
+- Instrumented training verified that each fit received exactly X_train and
+  y_train and no extra fit inputs, including validation data.
+- Verified 200 forest trees, depth <= 3, leaf sample counts >= 30, and
+  exactly 100 boosting rounds.
+- Tracked training CSV reads: only train.csv and validation.csv were loaded.
+- Verified hashes of the labeled source CSVs remained unchanged during the
+  successful audited boosting run; neither script writes to source CSVs.
+- Recomputed saved ROC-AUC, accuracy, and confusion matrices from prediction
+  CSVs for both models and both splits; all matched reported metrics.
+- Verified prediction row IDs/labels match source split order, probabilities
+  are finite within [0,1], and feature importances cover all 512 features.
+- Saved outputs/baseline_comparison.csv with the three baselines' train and
+  validation ROC-AUC, accuracy, and train-validation AUC gap.
+- XGBoost leads these initial configurations by about 0.0126 validation AUC
+  over the forest, but has the largest train-validation gap. This comparison
+  does not establish superiority over other boosting methods or significance
+  of the observed difference. No uncertainty analysis or tuning was performed.
+
+SHARED PREPROCESSING — APPROVED AND IMPLEMENTED
+- File: preprocessing.py, reusable by all three future model pipelines.
+- Load only train.csv and validation.csv from an explicit project directory.
+- Validate expected columns, matching schemas, numeric finite features,
+  binary nonmissing targets, and unique/nonmissing row IDs.
+- Return X_train, y_train, X_val, y_val, and row IDs kept separately.
+- Preserve feature names and consistent feature order.
+- For this first baseline, keep all 512 raw features and every row.
+- No scaling, imputation, PCA, feature selection, class rebalancing, or
+  outlier removal is performed; the inspected data do not require
+  missing-value handling and the intended models use tree splits.
+- Fail clearly on unexpected data problems instead of silently changing data.
+- Keep model fitting and evaluation outside this shared module.
+- Do not automatically execute loading or training when the module is imported.
+- Interface: from preprocessing import load_data; data = load_data(".").
+- load_data requires an explicit directory and returns a BaselineData dataclass
+  with X_train, y_train, X_val, y_val, train_ids, and val_ids attributes.
+- Features are pandas DataFrames; targets and IDs are pandas Series.
+- Feature columns use canonical order f0000 through f0511 even if CSV headers
+  are reordered. Feature values and source row order are preserved.
+- The dataclass prevents field reassignment, but its pandas objects remain
+  mutable. Copy them before experimenting with transformations.
+- Validation also rejects empty datasets, single-class targets (ROC-AUC needs
+  both classes), unexpected columns, and row IDs shared across the splits.
+- No automatic loading occurs on import; the module does not write files.
+
+PREPROCESSING VERIFICATION COMPLETED
+- Ran checks using .venv/bin/python -B; no model was instantiated or fitted.
+- Compared returned values, feature names, row order, targets, and IDs against
+  the original labeled CSVs: all preserved.
+- Confirmed feature shapes (2520, 512) and (560, 512).
+- Tracked CSV reads: load_data opened only train.csv and validation.csv.
+- Verified module import performs no CSV reads.
+- Verified reordered CSV headers produce canonical feature order.
+- Verified rejection of 12 invalid-data cases using temporary CSV copies:
+  missing column, unexpected column, missing feature value, infinite feature
+  value, nonnumeric feature, invalid target, missing target, single-class
+  target, duplicate IDs, blank IDs, empty dataset, and overlapping split IDs.
+- Temporary verification files were cleaned up; no test suite was added.
+
+ARCHIVE AND POST-BASELINE DISCUSSION
+- Created project_code.zip at the user's request, containing exactly the five
+  then-existing Python files: preprocessing.py, baseline_reporting.py,
+  decision_tree.py, random_forest.py, boosting.py. Verified archive contents.
+- This ZIP is a snapshot and has not been regenerated to include the later
+  training_analysis.py file.
+- Discussed standardisation: it generally preserves tree split ordering and
+  is not expected to materially improve these tree baselines.
+- Discussed PCA: may help or hurt; preserving variance does not guarantee
+  preserving predictive information, and mixed components weaken readability.
+  No PCA or scaling was fitted or added to any pipeline.
+- Proposed (not run) six forest configurations: max_depth=[3,6,10] crossed
+  with min_samples_leaf=[10,30], other settings fixed. The user instead
+  requested data analysis first. No tuning experiment is approved or underway.
+
+TRAINING DATA AUDIT — COMPLETED
+- Added training_analysis.py. Run: .venv/bin/python training_analysis.py.
+  Optional --data-dir and --output-dir; defaults relative to the script.
+- Reads only train.csv, without calling the two-split preprocessing loader.
+  No model fitting, feature selection, data cleaning, or pipeline changes.
+- Outputs in outputs/training_analysis/: summary.json, feature_summary.csv,
+  top_correlations.csv (30 largest absolute Pearson correlations),
+  row_summary.csv, training_overview.png.
+- Verified import safety and instrumented CSV reads: train.csv only.
+- Checked source hash before/after: unchanged. Saved tables and aggregate
+  AUC agree with summary; overview plot visually inspected.
+- Train: 2520 rows, 512 numeric features; class 0=1260, class 1=1260.
+  No class imbalance in this provided training sample.
+- No missing/nonfinite/negative feature values, missing or blank IDs,
+  duplicate IDs, exact duplicate feature rows, duplicate columns, constant
+  features, or all-zero rows. No duplicate feature rows after rounding to
+  six decimal places either; this is not a comprehensive near-duplicate test.
+- Zero-valued cells: 0.6507% overall. Largest zero fraction in any feature:
+  7.6587%. No feature's single most frequent value exceeds 7.6587%.
+- Feature standard deviations range 0.2907–1.4211.
+- All features are right-skewed; skewness range 1.1900–5.7440.
+- Largest absolute feature-pair Pearson correlation: 0.58593. No pairs above
+  0.8. This does not exclude multivariate redundancy or justify ruling PCA out.
+- The 1.5-IQR rule flags 5.4616% of cells and at least one feature in 2182
+  rows (86.5873%). These are tail flags, not confirmed errors. Automatically
+  deleting every flagged row would be overly aggressive; no rows removed.
+- All 512 features have raw-value training AUC below 0.5: lower values tend
+  to be associated with target=1 within this training sample.
+- Mean of each row's 512 features, averaged by class:
+  nonmatches=0.648542; matches=0.399240.
+- Exploratory score negative row mean has training ROC-AUC 0.836213.
+  Other oriented aggregate training AUCs: median=0.832943,
+  L2 norm=0.832786, std=0.826556, maximum=0.805812,
+  zero fraction (positive direction)=0.718095.
+- Strongest single-feature oriented training AUC: f0171, 0.700235.
+- These are descriptive associations on training labels, not held-out
+  performance or significance claims. Feature/direction ranking also uses
+  training labels. No aggregate-feature model was trained or validated.
+- Overall feature magnitude may carry useful predictive information. A
+  possible next experiment is adding row mean to the existing raw features
+  while holding model settings fixed. This experiment remains unapproved.
+- Hidden entities and measured label-noise rate cannot be recovered from
+  these checks. Train-validation shift was not assessed in this train-only
+  audit. No labels were corrected and no examples were designated erroneous.
+
+POST-AUDIT ANALYSIS — 2026-09-19 (READ-ONLY, NO MODEL FITTING)
+- Inputs: train.csv, plus the saved random-forest and XGBoost validation
+  prediction files for an uncertainty estimate. No model was fitted.
+  test.csv and sample_submission.csv were not opened.
+- Check scripts ran from a temporary session directory. They are not part
+  of the project or the submission package. Any result used to configure a
+  future pipeline must be recomputed inside the submitted code.
+- Code review: the scripts match this file's descriptions. Baselines fit
+  on train only, with no eval_set, early stopping, or test/submission
+  references.
+- Leakage diagnostic: row IDs look like random 20-character hex strings
+  and file order looks shuffled. Adjacent-row correlation of standardised
+  log1p features was +0.0021 versus +0.0005 for random pairs. Train has
+  1280 target runs versus about 1260 expected under shuffling. Neither
+  carries entity information, so entity-grouped CV folds cannot be formed
+  and within-train CV is expected to be optimistic.
+- Monotonicity: in decile bins of each feature, the training match rate
+  falls as the value rises for 512/512 features. Spearman correlation of
+  bin index with match rate: median -0.976, 5th-95th percentile -1.000
+  to -0.915. Only 11 features show an adjacent-bin rise larger than two
+  standard errors.
+- Working hypothesis: features behave like per-dimension distances between
+  the two observations, with weak evidence spread across many columns. It
+  guides ordinary feature engineering only. No attempt should be made to
+  reconstruct source embeddings, images or identities (Section 6).
+- Row aggregates, training AUC with a lower value predicting a match.
+  They fit no parameters, but the direction comes from training labels,
+  so these are not held-out estimates: mean log1p 0.8368, mean sqrt
+  0.8366, mean 0.8362, 10-90% trimmed mean 0.8356, 75th percentile
+  0.8339, median 0.8329, L2 norm 0.8328, 90th percentile 0.8288, 25th
+  percentile 0.8211, max 0.8058. Variants using train statistics: mean of
+  x divided by the train feature std 0.8334; count of values above the
+  train feature median 0.8323. The choice of aggregate barely matters.
+- The row mean alone scores 0.836 training AUC, above the depth-3 tree's
+  own training AUC of 0.790.
+- Magnitude dominates. Within deciles of the row mean, mean AUC was
+  0.5154 for zero count and 0.4931 for the share of cells below 10% of
+  the row mean, so neither adds signal. Row coefficient of variation
+  (0.5427) and max/mean (0.5426) add a little.
+- Match share by row-mean decile, lowest mean first, 252 rows each:
+  0.996, 0.933, 0.770, 0.607, 0.472, 0.333, 0.345, 0.246, 0.155, 0.143.
+- Equal-weight rank averages with the negative row mean lowered training
+  AUC: 0.8129 with zero count and 0.7324 with row coefficient of variation.
+- Mean off-diagonal feature correlation: pooled 0.1308, nonmatches 0.0429,
+  matches 0.1754. Zero-cell fraction: nonmatches 0.00270, matches 0.01032.
+- Feature mean/std ratio: median 0.897, 5th-95th percentile 0.693-1.050.
+- Baseline limits from saved artifacts: the depth-3 tree outputs only 8
+  distinct probabilities, so tied scores limit its AUC. Features with
+  nonzero importance: XGBoost 220 and the forest 350 of 512. The top 10
+  features hold 17.6% and 22.6% of importance. No feature dominates.
+- Validation uncertainty: stratified bootstrap, 2000 resamples of the
+  saved validation predictions (evaluation only).
+  Forest AUC: SE 0.0139, 95% interval 0.8547-0.9096.
+  XGBoost AUC: SE 0.0129, 95% interval 0.8699-0.9190.
+  Paired XGBoost minus forest: SE 0.0067, 95% interval -0.0006 to 0.0259.
+  Share of resamples with a difference <= 0: 0.033.
+- Spearman correlation of forest and XGBoost validation scores is 0.9504,
+  so averaging these two configurations would likely gain little.
+- Installed scikit-learn 1.9.1 decision tree, random forest, ExtraTrees
+  and HistGradientBoosting classifiers accept monotonic_cst. XGBoost 3.4.1
+  accepts monotone_constraints. scipy 1.18.1 is installed; LightGBM,
+  CatBoost and Optuna are not.
+
+PROPOSED ENHANCEMENTS — RANKED; APPROVED 2026-09-19, RUN IN experiments.py
+- Rationale: trees combine hundreds of weak, same-direction signals
+  poorly. Approved 2026-09-19 and implemented in experiments.py; see the
+  experiments section for design and results.
+1. Row-summary features for all three models: mean, median, log1p mean,
+   std, max and coefficient of variation, each computed within its row.
+   Raise the forest's max_features so the few new columns are considered.
+   First controlled step: the row-mean experiment listed in the audit.
+2. Monotone decreasing constraints on all raw features, with matching
+   directions on summary features and no constraint where the direction
+   is unclear, such as row coefficient of variation. All model types.
+3. Boosting shaped for many weak additive signals: depth 1-2, lower
+   learning rate, more rounds, row and column subsampling, stronger leaf
+   regularisation, with rounds chosen by CV within train.
+4. Forest with real capacity: deeper trees, smaller leaves, more features
+   per split and more trees, with ExtraTrees as a variant. This extends
+   the six-configuration grid proposed earlier.
+5. Higher-resolution single tree after adding summaries: depth 4-5 or
+   cost-complexity pruning, reducing tied scores while staying readable.
+6. Out-of-fold logistic-regression score, a learned weighted distance,
+   built within train and added as one feature for the tree models.
+   Removed 2026-09-19: it uses a linear model, which the user ruled out.
+7. Seed averaging and a fixed equal-weight average of final models.
+- Protocol: repeated 5-fold CV on train for tuning. First compare CV and
+  validation AUC for the current XGBoost configuration to measure CV
+  optimism. Send 2-3 finalists to validation and report paired bootstrap
+  intervals. Change one thing at a time.
+- LightGBM or CatBoost would be allowed as standard CPU libraries without
+  pretrained weights. Neither is installed; installing needs approval.
+
+RULES COMPLIANCE REVIEW — 2026-09-19
+Existing infrastructure: compliant with the method and data rules;
+packaging gaps remain.
+- All three baselines fit on train.csv only. Validation is used only for
+  evaluation. No eval_set, early stopping, fitted preprocessing, feature
+  selection, test access, external data or pretrained weights are used.
+- Installed libraries (numpy, pandas, scikit-learn, scipy, matplotlib,
+  xgboost-cpu, ipykernel) are standard CPU tools, not pretrained models,
+  encoders, embeddings or weights. All runs are CPU-only.
+- training_analysis.py and the 2026-09-19 checks are diagnostic analysis
+  of labeled data, which Section 6 allows. The bootstrap evaluated saved
+  validation predictions only, within validation's evaluation role.
+- row_id is used only for alignment and integrity checks, never as a
+  feature. The row-ID and row-order check was a leakage diagnostic.
+- Gaps to close before the final package (not violations now):
+  a) No executable notebook exists; Section 8 requires one.
+  b) No project code generates outputs/baseline_comparison.csv. Section 5
+     requires every step behind the submission to be in the package, and
+     the required three-model comparison should be reproducible.
+  c) Closed 2026-09-19 for the XGBoost baseline by make_submission.py.
+     Enhanced models do not have submission code yet.
+  d) project_code.zip is stale; it lacks training_analysis.py.
+  e) No pinned requirements file exists. Versions appear only in
+     metrics.json and this file, while reproducibility checks apply.
+  f) The rest of the Section 8 list was not visible; obtain it.
+Proposed enhancements: allowed as ordinary feature engineering and
+standard tabular models, under these conditions.
+- 1 Row summaries: allowed. They are row-wise with no fitted parameters,
+  and the same code runs on train, validation and test. Any variant using
+  train statistics must fit them on train only. Comparing a few
+  pre-specified feature sets on validation is model selection; any
+  data-driven feature-selection procedure must run on train only.
+- 2 Monotone constraints: allowed. Directions must come from training
+  labels only, computed in the submitted code rather than hard-coded from
+  scratch analyses, and derived within each fold for CV estimates.
+- 3-5 Boosting, forest, ExtraTrees, deeper or pruned tree: allowed.
+  Hyperparameters may be chosen by train CV or on validation. Early
+  stopping on validation passes validation data into fit, so treat it as
+  a gray area and avoid it unless the instructors confirm it. Choose
+  boosting rounds by train CV or as a grid value compared on validation.
+- 6 Out-of-fold logistic-regression feature: allowed under "other
+  standard tabular models and ensembles", which resolves the earlier open
+  question. Fit it and any scaler on train only; validation and test get
+  scores from the train-fitted model. Entity repeats inside train may make
+  out-of-fold scores look stronger than validation or test scores. That
+  is a methodological risk, not a rule issue. Declare it in the report.
+  Superseded 2026-09-19: the user ruled out linear models, so this
+  feature is not allowed and was removed from experiments.py.
+- 7 Seed averaging and equal-weight averaging: allowed. Average
+  probabilities row by row instead of rank-averaging across test rows, so
+  no transform depends on the test set and outputs stay within [0, 1].
+  Blend weights or a meta-model fitted on validation labels would be a
+  model fitted on validation, which Section 4 does not allow.
+- Protocol: allowed. Train CV fits and tunes; validation compares
+  finalists, makes the final selection and supports bootstrap evaluation.
+- Withdrawn: the earlier train-versus-validation distribution comparison.
+  It falls outside validation's listed roles, and a fitted classifier
+  separating the splits would be a model fitted on validation. Any test
+  involvement is prohibited. Ask the instructors before reviving it.
+Out of bounds for all future work:
+- Pretrained tabular models such as TabPFN (downloaded weights), external
+  data, and attempts to identify the source dataset or embedding model.
+- Reconstructing hidden entities or source observations, for example by
+  clustering rows into identities or propagating labels through shared
+  observations across pairs.
+- Using row_id or row order as features. Using test.csv for anything but
+  generating predictions: no test statistics, pseudo-labels or
+  clustering. As a conservative reading, also avoid transforms that
+  depend on other test rows, such as rank averaging.
+- Leaderboard probing, more than five submissions a day, or manual edits
+  to prediction files. Select models on validation, not the public board.
+- Sharing code, engineered features or predictions with other teams, or
+  publishing competition data. Keep any repository private, without CSVs.
+- Calibration fitted on validation. Monotone calibration cannot improve
+  ROC-AUC anyway.
+Requirements for the future submission code:
+- Read test.csv only in the prediction step. Apply the same row-wise
+  feature code and the train-fitted models; never refit on train plus
+  validation.
+- Assert that each test row_id appears exactly once and matches
+  sample_submission.csv, and that targets are finite and within [0, 1].
+  Write the file from code and record the designated submission.
+- Keep all three model families in the final comparison, even if the
+  final submission is an ensemble.
+
+RULE-COMPLIANT EXPERIMENTS — APPROVED 2026-09-19, ROUND 1 COMPLETED
+Scope and files
+- File: experiments.py (new). Run: .venv/bin/python experiments.py
+  Options: --data-dir, --output-dir, --n-jobs, and --quick for a reduced
+  smoke test. Outputs go to outputs/experiments/ and are written only when
+  the run ends: cv_results.csv, cv_fold_aucs.csv, validation_results.csv,
+  validation_predictions.csv, summary.json, final_tree_rules.txt,
+  final_feature_importances.csv. Reruns replace them.
+- Existing scripts were not modified. experiments.py imports load_data and
+  the baseline MODEL_PARAMS from decision_tree.py, random_forest.py and
+  boosting.py, so the baselines are identical. Importing it does no work.
+- Included: proposals 1-5 and 7 and the evaluation protocol. Only
+  decision trees, random forests / ExtraTrees and XGBoost are fitted.
+  Excluded: proposal 6 (a logistic-regression feature, removed after the
+  user's ruling on allowed models), the withdrawn train-versus-validation
+  comparison, early stopping on validation, new packages such as LightGBM
+  or CatBoost, and test.csv. XGBoost's "binary:logistic" objective is the
+  boosting loss for binary targets, as in the baseline; not a linear model.
+Design, with the reason for each change
+- CV: RepeatedStratifiedKFold, 5 folds x 2 repeats, random_state 42, on
+  train only. The same 10 folds serve every configuration, so comparisons
+  are paired. Selection rule at every stage: highest mean fold AUC. The
+  stopped first run used 3 repeats (15 folds).
+- Stage 1, calibration: the three baselines under CV. Reason: check that
+  CV scores can stand in for validation before relying on them.
+- Stage 2, feature ladder at baseline settings, one change per step:
+  (1) add the row mean; (2) add six row summaries: mean, median, mean of
+  log1p, std, max, and coefficient of variation std/mean, set to 0 for an
+  all-zero row; (3) forest only, max_features 0.2 so the few summary
+  columns are considered at more splits; (4) monotone constraints.
+  Reason: one aggregate carries most of the signal, and trees combine
+  many weak signals poorly. Summaries are row-wise with nothing fitted.
+- Monotone directions are computed inside each fit from its own rows: -1
+  or +1 by the sign of the column's AUC minus 0.5, and 0 (unconstrained)
+  when that gap is within two null standard errors, computed as
+  sqrt((n1+n0+1)/(12*n1*n0)). Reason: all 512 features fall monotonically
+  in train; constraints should limit overfitting and label-noise effects.
+- Stage 3, grids on each family's best ladder step, which fixes the
+  feature set and constraint setting. Tree: depth 3-6 x min leaf 10/20/30
+  x ccp_alpha 0/0.001/0.003 (36 configs). Forest: RF or ExtraTrees x
+  max_features sqrt/0.2 x depth 3/6/10/None x min leaf 1/10/30, 300 trees
+  (48). Boosting: learning rate 0.03, subsample 0.8, depth 1/2/3 x
+  colsample 0.3/0.7 x weak (min_child_weight 1, lambda 1) or strong
+  (10, 10) regularisation (12). Boosting rounds are chosen by CV, scored
+  every 50 rounds up to 3000 from one fit per fold. Reason: the baselines
+  were shallow and untuned; depth 1-2 boosting builds an additive model.
+- Stage 4, feature re-check at tuned settings: each family's tuned config
+  is also scored with the other combinations of raw or raw+summaries
+  features and monotone constraints off or on; boosting re-chooses its
+  rounds. The best by CV continues. Reason: stage 2 tested these changes
+  only on the untuned baselines, a weak test for tuned models. This
+  stage replaced the removed logistic-regression stage.
+- Stage 5: seed averaging over seeds 42-46 for the forest and boosting
+  finals, then an equal-weight average of their probabilities. Reason:
+  lower variance without blend weights fitted on any labels.
+- Stage 6: the baselines are refitted exactly, and the four enhanced
+  finalists (tree, forest, boosting, ensemble) are fitted on all train
+  rows and scored once on validation. A stratified bootstrap with 2000
+  resamples gives intervals and paired differences against each family
+  baseline and the XGBoost baseline. The highest validation AUC among the
+  enhanced finalists is recorded as the candidate.
+- CV tasks run in parallel over (configuration, fold) with joblib and one
+  thread per model, so results do not depend on thread counts.
+Smoke test (--quick: 1 x 5 folds, reduced grids; outputs discarded)
+- Instrumented run: importing read and wrote nothing; only train.csv and
+  validation.csv were read; no fit received a validation row. Fits used
+  2016 rows (CV folds), 1612-1613 (nested inner folds) or 2520 (full
+  train). The baselines reproduced their saved validation AUCs exactly:
+  0.747309, 0.882946, 0.895510.
+- Changes after the smoke test, none based on validation numbers: the
+  logistic C grid now extends down to 0.0001 because the best train-CV C
+  sat at the old lower edge of 0.001; maximum boosting rounds went from
+  2000 to 3000 as a precaution against the grid edge; the tree-rules
+  header now says leaf weights can be fractional, because monotone
+  constraints clip leaf probabilities.
+- Smoke-test CV hints from the reduced run: logistic regression on log1p
+  features reached CV AUC about 0.903, above every tree baseline. Adding
+  its logit raised boosting CV from about 0.894 to 0.912. Logistic
+  regression is no longer allowed; the result only shows that an
+  additive per-feature model suits this data.
+- Second smoke test, tree-only code: every fit was a DecisionTree,
+  RandomForest, ExtraTrees or XGBoost model; no fit received a
+  validation row; only train.csv and validation.csv were read.
+First full run (started 2026-09-19 19:53, stopped 20:34 in stage 3)
+- Stage 1-2 CV AUC over 15 folds:
+  tree: baseline 0.7234, +row mean 0.8114, +summaries 0.8158,
+    +monotone 0.8237 (chosen).
+  forest: baseline 0.8782 (chosen), +row mean 0.8753, +summaries 0.8698,
+    max_features 0.2 0.8609, +monotone 0.8563.
+  boosting: baseline 0.8911 (chosen), +row mean 0.8857, +summaries
+    0.8853, +monotone 0.8805.
+- At baseline settings, summaries and constraints help the tree a lot but
+  slightly hurt the forest and boosting. Their grids therefore use raw
+  features without constraints.
+- CV is not optimistic. CV minus validation AUC: tree -0.024, forest
+  -0.005, boosting -0.004. CV fits use 80% of train rows, which lowers
+  scores slightly. CV can guide selection for this data.
+- Stopped with SIGTERM at 20:34, still in stage 3 after about 39
+  minutes, because its stage 4 used logistic regression, which the user
+  ruled out. It wrote no outputs, and source hashes were unchanged.
+Code changes after the ruling (experiments.py)
+- Removed the logistic-regression stage, its helper functions, the
+  lr_feature option and the linear-model imports.
+- Added stage 4, the feature re-check at tuned settings, described above.
+- CV repeats cut from 3 to 2 to shorten the run; the first run spent
+  over 39 minutes in stage 3. The change was not based on any result.
+- joblib now logs task progress to stderr (verbose=5).
+- The forest + boosting average stays a separate finalist, assuming an
+  average of two allowed model families is acceptable. Drop it if the
+  course rules exclude such averages.
+Second full run, tree-only (2026-09-19 20:40 to 21:36, 56 minutes)
+- Runtime by stage: stages 1-2 42 s, stage 3 1664 s, stage 4 474 s,
+  stage 5 863 s, stage 6 309 s. Exit 0; source hashes unchanged.
+- Stage 1-2 CV AUC over 10 folds:
+  tree: baseline 0.7254, +row mean 0.8132, +summaries 0.8170,
+    +monotone 0.8249 (chosen).
+  forest: baseline 0.8779 (chosen), +row mean 0.8766, +summaries 0.8711,
+    max_features 0.2 0.8614, +monotone 0.8568.
+  boosting: baseline 0.8922 (chosen), +row mean 0.8883, +summaries
+    0.8861, +monotone 0.8817.
+- Stage 3 best by CV: tree depth 6, leaf 30, ccp 0 (0.8318; depth 6 is
+  the grid edge); forest ExtraTrees, max_features 0.2, no depth limit,
+  leaf 1 (0.8998); boosting depth 3, colsample 0.3, weak regularisation,
+  3000 rounds (0.9137, at the round edge).
+- Stage 4 re-check at tuned settings: row summaries now help boosting
+  (0.9137 to 0.9142, still 3000 rounds) but not the forest (0.8972 with
+  summaries). Monotone constraints hurt the tuned forest (0.8739) and
+  boosting (0.8952); for the tree they help only with the summaries
+  (0.8318 versus 0.8092 without constraints).
+- Stage 5 CV: forest x5 seeds 0.9035; boosting x5 seeds 0.9156;
+  equal-weight average 0.9148.
+- Validation AUC with 95% bootstrap intervals, and paired differences
+  against the XGBoost baseline (0.8955):
+  tree enhanced     0.8428 [0.8099, 0.8733]; diff -0.0527 [-0.0763, -0.0302]
+  forest enhanced   0.9202 [0.8972, 0.9410]; diff +0.0247 [+0.0131, +0.0379]
+  boosting enhanced 0.9232 [0.9010, 0.9433]; diff +0.0277 [+0.0154, +0.0407]
+  average           0.9253 [0.9034, 0.9450]; diff +0.0298 [+0.0183, +0.0420]
+  Each enhanced model also beats its own family baseline (tree 0.7473,
+  forest 0.8829).
+- Selected by validation AUC: the equal-weight average of ExtraTrees (5
+  seeds x 300 trees, raw features) and XGBoost (5 seeds x 3000 rounds,
+  depth 3, colsample 0.3, learning rate 0.03, subsample 0.8, raw features
+  plus six row summaries). Its interval against the baseline is above
+  zero, which meets the agreed submission rule.
+- CV calibration: CV minus validation AUC is tree -0.022, forest -0.005
+  and boosting -0.003 for the baselines. The enhanced models score higher
+  on validation than in CV (forest +0.017, boosting +0.008, average
+  +0.011), partly because final fits use all train rows.
+- Train AUC is 1.0000 for the enhanced forest, boosting and average, so
+  the train-validation gap no longer signals overfitting here; CV and
+  validation are the guides.
+- Verification: all seven validation AUCs recompute exactly from the saved
+  predictions; refitted baselines match their saved train and validation
+  AUCs; the fold file agrees with cv_results.csv (10 folds per config).
+  pandas' default CSV float parser shifted two tied ExtraTrees scores and
+  moved that AUC by 1.9e-5; exact round_trip parsing matches exactly.
+- Seven boosting configurations in stages 3-4 chose 3000 rounds, the
+  edge; round 2 re-searches the chosen boosting config up to 6000.
+- Outputs in outputs/experiments/: cv_results.csv, cv_fold_aucs.csv,
+  validation_results.csv, validation_predictions.csv, summary.json,
+  final_tree_rules.txt, final_feature_importances.csv.
+
+ROUND 2 EXPERIMENTS — APPROVED 2026-09-19, STOPPED IN PHASE 4
+- File: experiments_round2.py (new). Run after experiments.py:
+  .venv/bin/python experiments_round2.py. Options: --round1-dir (default
+  outputs/experiments), --output-dir (default outputs/experiments_round2),
+  --n-jobs and --quick. Importing it reads no data.
+- Implements work-plan phases 1-4 with trees only. Reads train.csv and
+  validation.csv through load_data, plus round 1's summary.json and saved
+  validation predictions; never reads test.csv. It stops if round 1 used
+  different folds or its predictions do not match validation.csv.
+- Same 10 folds as round 1. Screening uses the first 5 folds; the top 2
+  per group are confirmed on all 10. Every choice uses mean fold AUC.
+- Phase 1, additive boosting (16 configs): XGBoost with one interaction
+  group per column, depth 2 or 3, weak or strong regularisation, monotone
+  off or on, learning rate 0.1, subsample 0.8, colsample 0.5; and
+  HistGradientBoosting with no interactions, 4 or 8 leaves, L2 0 or 10,
+  monotone off or on, learning rate 0.1. Up to 2000 rounds, scored every
+  50 from one fit. Reason: the signal is a sum of weak per-feature effects.
+- Phase 2, aggregates: row quantiles at 10/25/75/90%, a 10-90% trimmed
+  mean, the mean train-ECDF value, and the shares of values below or
+  above each feature's train quartiles, added to the six summaries. The
+  ECDF and quartiles are fitted on the fitting rows only, without labels.
+  Tested on the round-1 tree, forest and boosting finals and the best
+  additive model; the round-1 boosting config re-chooses rounds up to 6000.
+- Phase 3, forest refinement around the phase-2 forest winner:
+  max_features at half, equal and double; leaf size at half, equal and
+  double (1 and 3 when it is 1); max_samples None or 0.7 for random
+  forests only; 500 trees.
+- Phase 4: seed averaging over seeds 42-46 (HistGradientBoosting is
+  deterministic, so it keeps one seed) and every equal-weight average of
+  the best forest, standard boosting and additive boosting.
+- Validation: at most three finalists (best forest, best boosting, best
+  average) plus the best tree for the required comparison only. The
+  paired bootstrap against the XGBoost baseline and the round-1 candidate
+  uses round 1's saved validation predictions. The best validation AUC
+  among the enhanced finalists of both rounds goes to selected_model.json.
+- Development fixes: XGBoost reads list-form interaction constraints as
+  feature names, which arrays lack, so the constraints are passed as an
+  index string. The re-search cap for round 1's boosting config went from
+  3000 to 6000 rounds because round 1's choice sat at the 3000 edge in
+  train CV.
+- Smoke test (--quick on the round-1 smoke outputs, instrumented): every
+  fit was a DecisionTree, ExtraTrees, HistGradientBoosting or XGBoost
+  model; no fit received a validation row; only train.csv,
+  validation.csv and the round-1 files were read. It took 27 minutes on
+  one core beside the round-1 run.
+- Full run started 2026-09-19 21:41.
+- Phase 1 (470 s): additive boosting did not help. Confirmed on 10 folds:
+  additive XGBoost depth 2, strong regularisation 0.8957 (800 rounds, the
+  phase winner); depth 2, weak 0.8950 (550 rounds); additive
+  HistGradientBoosting 4 or 8 leaves, L2 10, monotone 0.8910 and 0.8909.
+  Round 1's standard XGBoost reached 0.9142 single-seed. Blocking feature
+  interactions costs about 0.02 AUC, so interactions carry signal.
+- Phase 2 (754 s), CV AUC over 10 folds, base versus +aggregates:
+  round-1 tree 0.8318 versus 0.8277; round-1 ExtraTrees forest (1 seed)
+  0.8998 versus 0.8954; round-1 XGBoost (1 seed) 0.9144 at 4150 rounds
+  versus 0.9152 at 4400 rounds; additive XGBoost 0.8957 versus 0.8944.
+- Reading: the extra row statistics hurt the tree, the forest and the
+  additive model. For XGBoost they add +0.0008 and the longer round
+  search adds +0.0002 over round 1's 0.9142 at 3000 rounds; both are
+  within noise. Feature engineering of this kind is close to exhausted.
+- Phase 3 (66 s): ExtraTrees refinement around max_features 0.2, leaf 1,
+  no depth limit (6 configs screened on 5 folds, top 2 confirmed on 10).
+  Best: max_features 0.4, leaf 1, 500 trees, raw features, CV 0.9060,
+  up from 0.8998; leaf 3 gave 0.9033. More features per split help, as
+  in round 1, which supports trying max_features 0.3-0.5 for
+  RandomForest in round 3. This forest uses ExtraTrees (see the rules
+  check), so it is usable only if the instructors allow ExtraTrees.
+- Stopped with SIGTERM at 22:12 in phase 4 (seeds and averages, which
+  include the ExtraTrees forest), after the user approved round 3. It
+  wrote no outputs; results above come from its log. Exit 143; source
+  hashes unchanged. Validation was never run for round 2.
+
+RULES CHECK — TREE-ONLY PIPELINE AND SUBMISSION OPTIONS, 2026-09-19
+Checked against Sections 4-7 and the user's ruling (trees, forests and
+boosting only). Verdict: compliant, with one point for the user to confirm.
+- Models: DecisionTreeClassifier, RandomForestClassifier,
+  ExtraTreesClassifier, XGBClassifier and HistGradientBoostingClassifier,
+  plus equal-weight probability averages, which the user approved.
+  Instrumented runs recorded every fit; no other model type was fitted.
+- To confirm: ExtraTrees is a forest of randomised decision trees, a
+  random-forest variant but not RandomForestClassifier itself. The round-1
+  forest winner and the selected average use it. If the course means
+  RandomForestClassifier only, restrict the forest grids to it and rerun.
+- Assessment: under the written Section 4 ExtraTrees is allowed as a
+  standard tabular ensemble; under the user's stricter ruling it is a
+  gray area. The user is not sure. Only the designated final submission
+  counts, so the uploaded file (which uses ExtraTrees) is not binding.
+- Evidence that avoiding it costs little: best round-1 RandomForest CV
+  0.8971 versus best ExtraTrees 0.8998; tuned XGBoost alone validation
+  0.9232 versus 0.9253 for the ExtraTrees + XGBoost average. Both gaps
+  are within noise.
+- Interim decision proposed: keep the final candidate free of ExtraTrees
+  until the instructors confirm it, and ask them: "Is
+  ExtraTreesClassifier acceptable as our random-forest model, or must it
+  be RandomForestClassifier?"
+- XGBoost interaction constraints and HistGradientBoosting without
+  interactions are still gradient boosting of trees. XGBoost's
+  "binary:logistic" is the boosting loss, not a linear model.
+- Learned steps use training rows only: models, monotone directions (a
+  rank statistic, not a model) and train-quantile aggregates (no labels).
+  In CV they are fitted on the fitting folds; for validation and test,
+  on all of train. Other rows are only transformed.
+- Validation only scores pre-declared finalists, gives bootstrap
+  intervals and selects the final candidate. No model, weight or
+  threshold is fitted on it; there is no early stopping and no refit on
+  train plus validation.
+- make_submission.py reads test.csv only to predict. The round1 and
+  selected options rebuild the recorded model from train and write
+  nothing unless the refit reproduces the recorded validation AUC
+  exactly. The output passes every file-format check.
+- Caveats, not violations: selecting across rounds on validation makes
+  the chosen score slightly optimistic. experiments.py,
+  experiments_round2.py and make_submission.py must run in that order,
+  and all belong in the package and notebook.
+
+SUBMISSION SCRIPT — APPROVED AND RUN 2026-09-19
+- Current solution: the XGBoost baseline, the best of the three baselines
+  on validation (ROC-AUC 0.895510). Chosen on validation, not leaderboard.
+- File: make_submission.py. Run: .venv/bin/python make_submission.py
+  Optional --data-dir and --output. Default output is
+  outputs/submissions/submission_xgboost_baseline.csv plus a JSON record of
+  the same name. Reruns replace both. Importing the module does no work.
+- Steps: load train and validation with load_data; fit XGBClassifier with
+  the exact MODEL_PARAMS from boosting.py on train only; score validation as
+  a reproduction check; read test.csv and check its schema (row_id plus the
+  512 features, no target), finite numeric values and unique nonblank IDs;
+  predict P(target=1) using the canonical feature order; write rows in
+  sample_submission.csv order; re-read the written file and check it again.
+- Checks enforced in code: columns exactly row_id,target; row_id values and
+  order identical to sample_submission.csv; the test and sample ID sets are
+  equal; no duplicate or blank IDs; numeric, finite targets within [0, 1];
+  targets are not all 0/1 labels; no index column; written targets equal
+  the predictions exactly.
+- Change during development: the first run stopped at its final check.
+  pandas' default CSV float parser read 456 written values off by up to
+  1.1e-16, while Python float() and round_trip parsing matched the file
+  exactly. The re-read now uses float_precision="round_trip". The model and
+  predictions did not change.
+- Verification: the validation AUC 0.895510 reproduces the saved baseline.
+  An instrumented run recorded one fit on 2520 x 512 train rows, with no
+  validation or test row inside and no extra fit inputs. CSV files opened:
+  train, validation, test, sample_submission and the written submission.
+  A second run produced a byte-identical file. Source data hashes were
+  unchanged.
+- Independent csv-module check: header row_id,target; 1116 rows, matching
+  sample_submission.csv and test.csv; identical row order; unique IDs equal
+  to the test set; targets 0.0334 to 0.9785 with 1087 distinct values.
+- Submission SHA-256:
+  7f9bb2e99351c1441a155eb60bab6162d34c6223824580364cb758402fec0af3
+- Not uploaded by the assistant. At most five submissions a day; the public
+  score is provisional feedback. Record the designated final submission in
+  the Moodle package.
+Extension for the tree-only pipeline (approved with the work plan)
+- New options: --model round1 rebuilds the candidate selected by
+  experiments.py (outputs/experiments/summary.json); --model selected
+  rebuilds outputs/experiments_round2/selected_model.json. The default
+  --model baseline is unchanged and still writes a byte-identical
+  baseline file with the SHA-256 above.
+- Members are rebuilt with experiments_round2's feature and model code,
+  fitted on train only, and averaged with equal weights. The refit must
+  reproduce the recorded validation AUC within 1e-12, or no file is
+  written. The output name is submission_<model>.csv.
+- The round1 option was first tested on the round-1 smoke output; the
+  reproduction guard passed.
+Round-1 tree-only submission, 2026-09-19
+- File: outputs/submissions/submission_round1_ensemble_enhanced.csv plus
+  its JSON record. Model: the round-1 equal-weight average of ExtraTrees
+  and XGBoost described in the experiments section.
+- Validation AUC check: 0.925293, identical to round 1's recorded value.
+- Instrumented run: 5 ExtraTrees and 5 XGBoost fits, all on the 2520
+  train rows, with no validation or test row inside and no extra fit
+  inputs. Files read: train, validation, test, sample_submission and
+  round 1's summary.json.
+- A second run produced a byte-identical file. SHA-256:
+  ca864ccb503a5d47fcb01d1a4d02cc85bc704aa69bf2a58cd20c58b871db02c8
+- csv-module check: header row_id,target; 1116 rows in sample order;
+  unique IDs equal to the test set; targets 0.0467 to 0.99999988 with
+  1114 distinct values and none exactly 0 or 1. Rank correlation with
+  the baseline submission: 0.9565.
+- Not uploaded by the assistant. Source data hashes were unchanged.
+
+KAGGLE UPLOADS AND PUBLIC LEADERBOARD — 2026-09-19
+- The first upload scored exactly 0.50000. Cause: sample_submission.csv
+  was uploaded instead of the generated file. Every sample target is 0.5,
+  and constant predictions give an AUC of exactly 0.5. The generated file
+  has 1087 distinct values and the correct row order, so it could not
+  score exactly 0.5.
+- The user then uploaded outputs/submissions/submission_xgboost_baseline.csv
+  and reported the result as fine. Its public score was not shared in
+  this session. At least two of the day's five submissions were used.
+- Upload from outputs/submissions/, not the project root. Check the file
+  name in the Kaggle Submissions tab after each upload.
+- Public leaderboard snapshot, scored on about 50% of test rows: top
+  scores 0.93640, 0.93508, 0.92992, 0.90826, 0.88751; the host benchmark
+  baseline_submission.csv scored 0.72156. The user's entry is listed as
+  "Лев Светошев"; the Moodle package needs the Kaggle team name.
+- Public scores reported by the user: XGBoost baseline 0.89286 (second
+  upload); round-1 tree-only average 0.91633 (third upload), rank 6 at the
+  time. Their validation AUCs were 0.8955 and 0.9253, so public scores
+  track validation roughly, about 0.003 to 0.009 lower.
+- Leaderboard after the third upload: top scores 0.94149, 0.93640,
+  0.93508, 0.92992 and 0.91910; host benchmark 0.72156. Three submissions
+  have been used on 2026-09-19; Kaggle's daily limit is five.
+
+WORK PLAN TO IMPROVE ROC-AUC — TREE MODELS ONLY, APPROVED 2026-09-19
+- Status: approved by the user. Phase 0 is done; phases 1-4 run as
+  experiments_round2.py; phases 5 and 6 are pending.
+- Revised 2026-09-19 after the user's ruling. The earlier plan's linear
+  and non-tree phases were withdrawn. Every step uses only decision
+  trees, random forests / ExtraTrees and gradient boosting.
+- Evidence: the signal is additive and monotone across 512 weak features;
+  an additive linear score reached about 0.90 CV in the first smoke test,
+  so per-feature additive structure fits well; CV tracks validation
+  closely; the public top is about 0.936 against 0.896 validation AUC for
+  the current baseline.
+- Phase 0, finish the tree-only run and record it. If an enhanced
+  finalist beats the XGBoost baseline on validation with a paired
+  bootstrap interval above zero, extend make_submission.py to it and
+  upload once. The script change needs approval. Done 2026-09-19: the
+  round-1 average met the rule and its submission file was generated.
+- Phase 1, additive boosting (largest expected gain): stop trees from
+  combining features, so boosting builds a sum of per-feature effects.
+  XGBoost interaction_constraints with one group per feature, and
+  scikit-learn HistGradientBoostingClassifier with no interactions, each
+  with and without monotone constraints. Tune learning rate, rounds by
+  CV, max_bin and leaf regularisation. Both are gradient boosting.
+- Phase 2, better unsupervised aggregates for trees: row quantiles and
+  trimmed means, and counts or mean ranks of values relative to each
+  feature's train quantiles. No labels or linear models are involved;
+  quantiles are fitted on train folds only. Re-test at tuned settings.
+- Phase 3, forest refinements: a finer max_features and leaf-size grid
+  around the best stage-3 config, more trees, and max_samples.
+- Phase 4, combine allowed models: seed averaging, and equal-weight
+  averages of the best forest, standard boosting and additive boosting,
+  if averaging allowed families is acceptable under the course rules.
+- Phase 5, selection and submission: at most three finalists per round
+  go to validation; submit only a model that beats the current best by a
+  paired bootstrap interval above zero; at most one or two uploads a day;
+  never choose on the public leaderboard; designate one final submission.
+- Phase 6, packaging: one executable notebook reproducing every step, a
+  pinned requirements file, the model comparison generated by code, a
+  regenerated project_code.zip, and the missing Section 8 items.
+- Efficiency: screen with 1 x 5 CV and confirm the top few with 2 x 5;
+  cap boosting rounds for screening; log every validation look. With a
+  validation SE near 0.013, differences under about 0.01 are noise.
+
+ROUND-1 GRID TRENDS AND ROUND 3 — PROPOSED AND APPROVED 2026-09-19
+Trends in round 1's CV results (10 folds):
+- XGBoost improves with depth: best of depth 1, 2 and 3 is 0.9019,
+  0.9099 and 0.9137. Depth 3 was the largest tried. Weak regularisation
+  beats strong; colsample 0.3 and 0.7 tie at depth 3 (0.9137).
+- Six of the 12 boosting grid configs chose the 3000-round maximum,
+  including the winner, so more rounds or a higher learning rate may help.
+- RandomForest improves with max_features 0.2 over sqrt and with deeper
+  trees and leaf 1: best 0.8971 (depth 10), 0.8956 (no depth limit).
+  Both settings sit at the edge of the grid.
+- Preprocessing: trees ignore scaling and monotone transforms, and the
+  data have no missing or categorical values. Only added features can
+  help: summaries gave tuned XGBoost +0.0005; round 2 phase 2 found the
+  extra row statistics worth at most +0.0008 for XGBoost and harmful for
+  the other models.
+Proposed round 3 (trees only, no ExtraTrees):
+1. Deeper XGBoost: depth 4-6, colsample 0.3 or 0.5, subsample 0.6 or 0.8,
+   learning rate 0.05, rounds chosen by CV up to 4000, raw+summaries.
+2. RandomForest only: max_features 0.2, 0.3 or 0.5; no depth limit or
+   depth 15; leaf 1 or 2; 500 trees.
+3. Feature tests on the best configs: raw+summaries versus the round-2
+   aggregates and a scale-free profile (each feature divided by the row
+   mean, with the row mean kept), since matched pairs differ mainly in
+   overall scale.
+4. Seed averaging; RandomForest + XGBoost average; average of top XGBoost
+   settings.
+5. Validation for at most three finalists, compared with round 1's tuned
+   XGBoost (0.9232, no ExtraTrees) by paired bootstrap.
+- Recommendation: stop round 2, whose additive phase failed and whose
+  remaining forest parts use ExtraTrees, and run round 3 instead.
+- Expected gain: a few thousandths reliably, possibly more from depth.
+  Validation differences under about 0.01 are noise.
+
+ROUND 3 EXPERIMENTS — APPROVED 2026-09-19, RUN IN PROGRESS
+- File: experiments_round3.py (new). Run after experiments.py:
+  .venv/bin/python experiments_round3.py. Options: --round1-dir (default
+  outputs/experiments), --output-dir (default outputs/experiments_round3),
+  --n-jobs and --quick. Importing it reads no data.
+- No ExtraTrees: every forest is RandomForestClassifier. Only decision
+  trees, random forests and XGBoost are fitted. Reads train.csv and
+  validation.csv, plus round 1's summary.json, cv_fold_aucs.csv and
+  validation predictions; never reads test.csv.
+- Same 10 folds as round 1; grids screened on 5 folds, top 2 confirmed on
+  10. Paired CV reference: round 1's seeded XGBoost fold AUCs (0.9156).
+- Phase 1, deeper XGBoost (12 configs): depth 4/5/6 x colsample 0.3/0.5
+  x subsample 0.6/0.8, learning rate 0.05, min_child_weight 1, lambda 1,
+  rounds chosen by CV every 50 up to 4000, raw+summaries features.
+- Phase 2, RandomForest (12 configs): max_features 0.2/0.3/0.5 x depth
+  None/15 x leaf 1/2, 500 trees, bootstrap, raw features.
+- Phase 3: the scale-free profile feature set on both winners: each
+  feature divided by its row mean (0 for an all-zero row) replaces the
+  raw values, with the six summaries kept. Chosen by CV.
+- Phase 4: XGBoost seed averaging (seeds 42-46); averages of RandomForest
+  + seeded XGBoost and of the top two XGBoost settings (single seed each).
+- Validation: finalists round3_xgb, round3_rf and the best average by CV,
+  with bootstrap intervals and paired differences against the XGBoost
+  baseline and round 1's tuned XGBoost (0.9232, no ExtraTrees). The best
+  validation AUC among the round-3 finalists and round 1's tuned XGBoost
+  goes to outputs/experiments_round3/selected_model.json, which
+  make_submission.py --model selected --selected <that file> rebuilds.
+- Differences from the proposal: the extra-statistics test was dropped
+  after round 2 phase 2 showed at most +0.0008; RandomForest keeps one
+  seed because with 500 trees extra seeds only add trees; the average of
+  top XGBoost settings uses single-seed members.
+- Code change in experiments_round2.py: a new "profile+summaries" feature
+  set (row_profile function, PROFILE_SETS, profile column names). Existing
+  feature sets are unchanged, verified on test arrays. The shared design()
+  lets round 3 and make_submission.py use the profile features.
+- Timing check on an idle machine, single thread: XGBoost depth 4 about
+  48 s and depth 6 about 114 s per 4000 rounds; RandomForest 500 trees at
+  max_features 0.5 about 94 s. Timing only; no result informed a choice.
+- Smoke test (--quick on round-1 smoke outputs, instrumented, 6 minutes):
+  every fit was RandomForest or XGBoost; no ExtraTrees; no fit received a
+  validation row; only train.csv, validation.csv and round-1 files were
+  read. make_submission.py --model selected then rebuilt the smoke
+  selection and reproduced its validation AUC exactly (0.924936).
+- Full run started 2026-09-19 22:22. Results will be added here.
+
+CURRENT STATUS
+- context.txt created at the user's request.
+- preprocessing.py implemented and verified after explicit user approval.
+- decision_tree.py created, approved baseline trained, and results saved.
+- random_forest.py and boosting.py created; both baselines trained and
+  evaluated, artifacts verified, and all three baseline results compared.
+- No serialized model or notebook exists. make_submission.py generated
+  the XGBoost baseline submission, which the user uploaded on the second
+  attempt; the first upload was sample_submission.csv by mistake. It
+  then generated the round-1 tree-only submission (validation AUC
+  0.9253), which the user uploaded: public score 0.91633.
+- Source datasets remain unchanged. test.csv and sample_submission.csv
+  were first read on 2026-09-19 by make_submission.py, for prediction and
+  file-format checks only.
+- Training data audit completed and recorded; no changes to the three model
+  pipelines or shared preprocessing. Validation and test were not loaded in
+  this audit. No additional models were trained.
+- 2026-09-19: post-audit analysis, validation uncertainty estimate and
+  rules compliance review recorded above. Existing pipelines comply with
+  the method and data rules; packaging gaps for Sections 5 and 8 are
+  listed. Only this file was edited; no code, model, output or dataset
+  changed.
+- Round 1 of the tree-only experiments is complete. Round 2 was stopped
+  in phase 4; its phases 1-3 are recorded. Round 3 (no ExtraTrees) is
+  running; results go in its section.
+- Pending: whether ExtraTrees is allowed (ask the instructors). Until
+  then the next submission is chosen only from models without ExtraTrees.
+- Next step: record round 2. If its selection beats the round-1
+  candidate on validation, generate its file with --model selected.
+  The user decides uploads and whether ExtraTrees counts as a random
+  forest. Remaining work: phase 5 discipline and phase 6 packaging.
+- Update this file when approved decisions or completed work change.

@@ -1,0 +1,707 @@
+{
+  "purpose": "Rule-compliant experiments to raise validation ROC-AUC",
+  "allowed_models": "Decision tree, random forest / ExtraTrees, XGBoost only (user ruling); equal-weight averaging of forest and boosting",
+  "data": {
+    "train_rows": 2520,
+    "validation_rows": 560,
+    "raw_features": 512,
+    "summary_features": [
+      "row_mean",
+      "row_median",
+      "row_log1p_mean",
+      "row_std",
+      "row_max",
+      "row_cv"
+    ],
+    "test_csv_read": false
+  },
+  "settings": {
+    "n_splits": 5,
+    "n_repeats": 2,
+    "forest_trees": 300,
+    "max_rounds": 3000,
+    "round_step": 50,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "grid_limit": null,
+    "bootstrap": 2000
+  },
+  "cv": {
+    "scheme": "RepeatedStratifiedKFold",
+    "n_splits": 5,
+    "n_repeats": 2,
+    "random_state": 42,
+    "folds": 10
+  },
+  "selection_rule": "Highest mean fold AUC on train CV at every stage; validation is used only for the final evaluation and selection.",
+  "chosen_ladder_steps": {
+    "tree": {
+      "family": "tree",
+      "name": "4 +monotone constraints",
+      "stage": "2-ladder",
+      "params": {
+        "max_depth": 3,
+        "min_samples_leaf": 30
+      },
+      "feature_set": "raw+summaries",
+      "monotone": true,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [],
+      "columns": 518,
+      "cv_auc_mean": 0.8248795351473923,
+      "cv_auc_std": 0.009313872166386766,
+      "boosting_rounds": null
+    },
+    "forest": {
+      "family": "forest",
+      "name": "0 baseline",
+      "stage": "1-calibration",
+      "params": {
+        "kind": "rf",
+        "n_estimators": 200,
+        "max_depth": 3,
+        "min_samples_leaf": 30,
+        "max_features": "sqrt",
+        "bootstrap": true
+      },
+      "feature_set": "raw",
+      "monotone": false,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [],
+      "columns": 512,
+      "cv_auc_mean": 0.8779069035021416,
+      "cv_auc_std": 0.014328975743888325,
+      "boosting_rounds": null
+    },
+    "boosting": {
+      "family": "boosting",
+      "name": "0 baseline",
+      "stage": "1-calibration",
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "min_child_weight": 1,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0,
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "device": "cpu",
+        "importance_type": "gain"
+      },
+      "feature_set": "raw",
+      "monotone": false,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [],
+      "columns": 512,
+      "cv_auc_mean": 0.8922225371630133,
+      "cv_auc_std": 0.01262941816911482,
+      "boosting_rounds": null
+    }
+  },
+  "chosen_grid_configs": {
+    "tree": {
+      "family": "tree",
+      "name": "depth 6, leaf 30, ccp 0.0",
+      "stage": "3-grid",
+      "params": {
+        "max_depth": 6,
+        "min_samples_leaf": 30,
+        "ccp_alpha": 0.0
+      },
+      "feature_set": "raw+summaries",
+      "monotone": true,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [],
+      "columns": 518,
+      "cv_auc_mean": 0.8318208301839253,
+      "cv_auc_std": 0.011736453941176492,
+      "boosting_rounds": null
+    },
+    "forest": {
+      "family": "forest",
+      "name": "et, max_features 0.2, depth None, leaf 1",
+      "stage": "3-grid",
+      "params": {
+        "kind": "et",
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "max_features": 0.2
+      },
+      "feature_set": "raw",
+      "monotone": false,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [],
+      "columns": 512,
+      "cv_auc_mean": 0.8997535588309397,
+      "cv_auc_std": 0.01153683212966143,
+      "boosting_rounds": null
+    },
+    "boosting": {
+      "family": "boosting",
+      "name": "depth 3, colsample 0.3, weak regularisation",
+      "stage": "3-grid",
+      "params": {
+        "learning_rate": 0.03,
+        "subsample": 0.8,
+        "reg_alpha": 0.0,
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "device": "cpu",
+        "importance_type": "gain",
+        "n_estimators": 3000,
+        "max_depth": 3,
+        "colsample_bytree": 0.3,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0
+      },
+      "feature_set": "raw",
+      "monotone": false,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [
+        50,
+        100,
+        150,
+        200,
+        250,
+        300,
+        350,
+        400,
+        450,
+        500,
+        550,
+        600,
+        650,
+        700,
+        750,
+        800,
+        850,
+        900,
+        950,
+        1000,
+        1050,
+        1100,
+        1150,
+        1200,
+        1250,
+        1300,
+        1350,
+        1400,
+        1450,
+        1500,
+        1550,
+        1600,
+        1650,
+        1700,
+        1750,
+        1800,
+        1850,
+        1900,
+        1950,
+        2000,
+        2050,
+        2100,
+        2150,
+        2200,
+        2250,
+        2300,
+        2350,
+        2400,
+        2450,
+        2500,
+        2550,
+        2600,
+        2650,
+        2700,
+        2750,
+        2800,
+        2850,
+        2900,
+        2950,
+        3000
+      ],
+      "columns": 512,
+      "cv_auc_mean": 0.9137471655328797,
+      "cv_auc_std": 0.011563248903034368,
+      "boosting_rounds": 3000
+    }
+  },
+  "chosen_after_feature_recheck": {
+    "tree": {
+      "family": "tree",
+      "name": "depth 6, leaf 30, ccp 0.0",
+      "stage": "3-grid",
+      "params": {
+        "max_depth": 6,
+        "min_samples_leaf": 30,
+        "ccp_alpha": 0.0
+      },
+      "feature_set": "raw+summaries",
+      "monotone": true,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [],
+      "columns": 518,
+      "cv_auc_mean": 0.8318208301839253,
+      "cv_auc_std": 0.011736453941176492,
+      "boosting_rounds": null
+    },
+    "forest": {
+      "family": "forest",
+      "name": "et, max_features 0.2, depth None, leaf 1",
+      "stage": "3-grid",
+      "params": {
+        "kind": "et",
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "max_features": 0.2
+      },
+      "feature_set": "raw",
+      "monotone": false,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [],
+      "columns": 512,
+      "cv_auc_mean": 0.8997535588309397,
+      "cv_auc_std": 0.01153683212966143,
+      "boosting_rounds": null
+    },
+    "boosting": {
+      "family": "boosting",
+      "name": "depth 3, colsample 0.3, weak regularisation [raw+summaries]",
+      "stage": "4-feature-recheck",
+      "params": {
+        "learning_rate": 0.03,
+        "subsample": 0.8,
+        "reg_alpha": 0.0,
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "device": "cpu",
+        "importance_type": "gain",
+        "n_estimators": 3000,
+        "max_depth": 3,
+        "colsample_bytree": 0.3,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0
+      },
+      "feature_set": "raw+summaries",
+      "monotone": false,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [
+        50,
+        100,
+        150,
+        200,
+        250,
+        300,
+        350,
+        400,
+        450,
+        500,
+        550,
+        600,
+        650,
+        700,
+        750,
+        800,
+        850,
+        900,
+        950,
+        1000,
+        1050,
+        1100,
+        1150,
+        1200,
+        1250,
+        1300,
+        1350,
+        1400,
+        1450,
+        1500,
+        1550,
+        1600,
+        1650,
+        1700,
+        1750,
+        1800,
+        1850,
+        1900,
+        1950,
+        2000,
+        2050,
+        2100,
+        2150,
+        2200,
+        2250,
+        2300,
+        2350,
+        2400,
+        2450,
+        2500,
+        2550,
+        2600,
+        2650,
+        2700,
+        2750,
+        2800,
+        2850,
+        2900,
+        2950,
+        3000
+      ],
+      "columns": 518,
+      "cv_auc_mean": 0.9142132779037542,
+      "cv_auc_std": 0.01122149109540057,
+      "boosting_rounds": 3000
+    }
+  },
+  "finals": {
+    "tree": {
+      "family": "tree",
+      "name": "depth 6, leaf 30, ccp 0.0",
+      "stage": "3-grid",
+      "params": {
+        "max_depth": 6,
+        "min_samples_leaf": 30,
+        "ccp_alpha": 0.0
+      },
+      "feature_set": "raw+summaries",
+      "monotone": true,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [],
+      "columns": 518,
+      "cv_auc_mean": 0.8318208301839253,
+      "cv_auc_std": 0.011736453941176492,
+      "boosting_rounds": null,
+      "monotone_directions_full_train": {
+        "decreasing": 517,
+        "increasing": 0,
+        "unconstrained": 1,
+        "summary_columns": {
+          "row_mean": -1,
+          "row_median": -1,
+          "row_log1p_mean": -1,
+          "row_std": -1,
+          "row_max": -1,
+          "row_cv": 0
+        }
+      }
+    },
+    "forest": {
+      "family": "forest",
+      "name": "et, max_features 0.2, depth None, leaf 1 x5 seeds",
+      "stage": "5-seeds",
+      "params": {
+        "kind": "et",
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "max_features": 0.2
+      },
+      "feature_set": "raw",
+      "monotone": false,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "checkpoints": [],
+      "columns": 512,
+      "cv_auc_mean": 0.9035163139329805,
+      "cv_auc_std": 0.011712720285857256,
+      "boosting_rounds": null
+    },
+    "boosting": {
+      "family": "boosting",
+      "name": "depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",
+      "stage": "5-seeds",
+      "params": {
+        "learning_rate": 0.03,
+        "subsample": 0.8,
+        "reg_alpha": 0.0,
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "tree_method": "hist",
+        "device": "cpu",
+        "importance_type": "gain",
+        "n_estimators": 3000,
+        "max_depth": 3,
+        "colsample_bytree": 0.3,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0
+      },
+      "feature_set": "raw+summaries",
+      "monotone": false,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "checkpoints": [],
+      "columns": 518,
+      "cv_auc_mean": 0.9155848450491307,
+      "cv_auc_std": 0.010816108596961797,
+      "boosting_rounds": null
+    },
+    "ensemble": {
+      "family": "ensemble",
+      "name": "equal-weight forest + boosting probabilities",
+      "stage": "5-ensemble",
+      "params": {
+        "members": [
+          "et, max_features 0.2, depth None, leaf 1 x5 seeds",
+          "depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds"
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ]
+      },
+      "feature_set": "raw",
+      "monotone": false,
+      "seeds": [
+        42
+      ],
+      "checkpoints": [],
+      "columns": null,
+      "cv_auc_mean": 0.9147534013605443,
+      "cv_auc_std": 0.011186311518456091,
+      "boosting_rounds": null
+    }
+  },
+  "calibration": {
+    "tree": {
+      "cv_auc": 0.7253637566137566,
+      "validation_auc": 0.7473086734693878,
+      "cv_minus_validation": -0.021944916855631158
+    },
+    "forest": {
+      "cv_auc": 0.8779069035021416,
+      "validation_auc": 0.8829464285714286,
+      "cv_minus_validation": -0.005039525069286954
+    },
+    "boosting": {
+      "cv_auc": 0.8922225371630133,
+      "validation_auc": 0.8955102040816326,
+      "cv_minus_validation": -0.0032876669186193697
+    }
+  },
+  "validation": [
+    {
+      "model": "tree_baseline",
+      "family": "tree",
+      "role": "baseline",
+      "description": "DecisionTreeClassifier baseline, raw features",
+      "cv_auc_mean": 0.7253637566137566,
+      "train_auc": 0.7904147770219199,
+      "validation_auc": 0.7473086734693878,
+      "validation_auc_se": 0.020475045419171552,
+      "validation_ci_low": 0.7049901147959184,
+      "validation_ci_high": 0.7861391900510204,
+      "cv_minus_validation_auc": -0.021944916855631158,
+      "train_minus_validation_auc": 0.04310610355253208,
+      "train_accuracy": 0.7317460317460317,
+      "validation_accuracy": 0.6964285714285714,
+      "validation_confusion_matrix": "[[197, 83], [87, 193]]",
+      "diff_vs_xgboost_baseline": -0.14820153061224484,
+      "diff_vs_xgboost_baseline_ci_low": -0.186244738520408,
+      "diff_vs_xgboost_baseline_ci_high": -0.11035028698979589,
+      "diff_vs_xgboost_baseline_share_le_0": 1.0
+    },
+    {
+      "model": "forest_baseline",
+      "family": "forest",
+      "role": "baseline",
+      "description": "RandomForestClassifier baseline, raw features",
+      "cv_auc_mean": 0.8779069035021416,
+      "train_auc": 0.9388277903754094,
+      "validation_auc": 0.8829464285714286,
+      "validation_auc_se": 0.014146494646818856,
+      "validation_ci_low": 0.8548536352040816,
+      "validation_ci_high": 0.9102697704081633,
+      "cv_minus_validation_auc": -0.005039525069286954,
+      "train_minus_validation_auc": 0.055881361803980845,
+      "train_accuracy": 0.8273809523809523,
+      "validation_accuracy": 0.7892857142857143,
+      "validation_confusion_matrix": "[[262, 18], [100, 180]]",
+      "diff_vs_xgboost_baseline": -0.012563775510204045,
+      "diff_vs_xgboost_baseline_ci_low": -0.025574936224489773,
+      "diff_vs_xgboost_baseline_ci_high": 0.0006380739795918033,
+      "diff_vs_xgboost_baseline_share_le_0": 0.969
+    },
+    {
+      "model": "boosting_baseline",
+      "family": "boosting",
+      "role": "baseline",
+      "description": "XGBClassifier baseline, raw features",
+      "cv_auc_mean": 0.8922225371630133,
+      "train_auc": 0.9837767699672462,
+      "validation_auc": 0.8955102040816326,
+      "validation_auc_se": 0.013062916806754948,
+      "validation_ci_low": 0.8686224489795918,
+      "validation_ci_high": 0.9209623724489795,
+      "cv_minus_validation_auc": -0.0032876669186193697,
+      "train_minus_validation_auc": 0.08826656588561355,
+      "train_accuracy": 0.9341269841269841,
+      "validation_accuracy": 0.8214285714285714,
+      "validation_confusion_matrix": "[[245, 35], [65, 215]]"
+    },
+    {
+      "model": "tree_enhanced",
+      "family": "tree",
+      "role": "enhanced",
+      "description": "depth 6, leaf 30, ccp 0.0 [raw+summaries, monotone]",
+      "cv_auc_mean": 0.8318208301839253,
+      "train_auc": 0.8628514739229025,
+      "validation_auc": 0.8428188775510203,
+      "validation_auc_se": 0.016292942895611742,
+      "validation_ci_low": 0.8098622448979592,
+      "validation_ci_high": 0.8733104272959186,
+      "cv_minus_validation_auc": -0.010998047367094976,
+      "train_minus_validation_auc": 0.02003259637188226,
+      "train_accuracy": 0.7738095238095238,
+      "validation_accuracy": 0.7714285714285715,
+      "validation_confusion_matrix": "[[237, 43], [85, 195]]",
+      "diff_vs_family_baseline": 0.09551020408163247,
+      "diff_vs_family_baseline_ci_low": 0.054240274234693714,
+      "diff_vs_family_baseline_ci_high": 0.13727248086734714,
+      "diff_vs_family_baseline_share_le_0": 0.0,
+      "diff_vs_xgboost_baseline": -0.05269132653061237,
+      "diff_vs_xgboost_baseline_ci_low": -0.07626020408163237,
+      "diff_vs_xgboost_baseline_ci_high": -0.03023214285714286,
+      "diff_vs_xgboost_baseline_share_le_0": 1.0
+    },
+    {
+      "model": "forest_enhanced",
+      "family": "forest",
+      "role": "enhanced",
+      "description": "et, max_features 0.2, depth None, leaf 1 x5 seeds [raw]",
+      "cv_auc_mean": 0.9035163139329805,
+      "train_auc": 1.0,
+      "validation_auc": 0.920172193877551,
+      "validation_auc_se": 0.010965839826252289,
+      "validation_ci_low": 0.8972319834183673,
+      "validation_ci_high": 0.9409899553571429,
+      "cv_minus_validation_auc": -0.016655879944570517,
+      "train_minus_validation_auc": 0.079827806122449,
+      "train_accuracy": 1.0,
+      "validation_accuracy": 0.8125,
+      "validation_confusion_matrix": "[[258, 22], [83, 197]]",
+      "diff_vs_family_baseline": 0.03722576530612243,
+      "diff_vs_family_baseline_ci_low": 0.0249548788265307,
+      "diff_vs_family_baseline_ci_high": 0.05061910076530616,
+      "diff_vs_family_baseline_share_le_0": 0.0,
+      "diff_vs_xgboost_baseline": 0.024661989795918382,
+      "diff_vs_xgboost_baseline_ci_low": 0.013060746173469431,
+      "diff_vs_xgboost_baseline_ci_high": 0.03792267219387761,
+      "diff_vs_xgboost_baseline_share_le_0": 0.0
+    },
+    {
+      "model": "boosting_enhanced",
+      "family": "boosting",
+      "role": "enhanced",
+      "description": "depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds [raw+summaries]",
+      "cv_auc_mean": 0.9155848450491307,
+      "train_auc": 1.0,
+      "validation_auc": 0.9232397959183674,
+      "validation_auc_se": 0.010631653908359975,
+      "validation_ci_low": 0.9010398596938776,
+      "validation_ci_high": 0.9433319515306122,
+      "cv_minus_validation_auc": -0.007654950869236621,
+      "train_minus_validation_auc": 0.07676020408163264,
+      "train_accuracy": 1.0,
+      "validation_accuracy": 0.8357142857142857,
+      "validation_confusion_matrix": "[[239, 41], [51, 229]]",
+      "diff_vs_family_baseline": 0.027729591836734735,
+      "diff_vs_family_baseline_ci_low": 0.01536989795918375,
+      "diff_vs_family_baseline_ci_high": 0.040682397959183686,
+      "diff_vs_family_baseline_share_le_0": 0.0,
+      "diff_vs_xgboost_baseline": 0.027729591836734735,
+      "diff_vs_xgboost_baseline_ci_low": 0.01536989795918375,
+      "diff_vs_xgboost_baseline_ci_high": 0.040682397959183686,
+      "diff_vs_xgboost_baseline_share_le_0": 0.0
+    },
+    {
+      "model": "ensemble_enhanced",
+      "family": "ensemble",
+      "role": "enhanced",
+      "description": "equal-weight forest + boosting probabilities",
+      "cv_auc_mean": 0.9147534013605443,
+      "train_auc": 1.0,
+      "validation_auc": 0.9252933673469388,
+      "validation_auc_se": 0.010534705083497698,
+      "validation_ci_low": 0.9033992346938775,
+      "validation_ci_high": 0.9450395408163265,
+      "cv_minus_validation_auc": -0.010539965986394506,
+      "train_minus_validation_auc": 0.07470663265306121,
+      "train_accuracy": 1.0,
+      "validation_accuracy": 0.8339285714285715,
+      "validation_confusion_matrix": "[[242, 38], [55, 225]]",
+      "diff_vs_family_baseline": 0.029783163265306167,
+      "diff_vs_family_baseline_ci_low": 0.01830261479591836,
+      "diff_vs_family_baseline_ci_high": 0.04195153061224488,
+      "diff_vs_family_baseline_share_le_0": 0.0,
+      "diff_vs_xgboost_baseline": 0.029783163265306167,
+      "diff_vs_xgboost_baseline_ci_low": 0.01830261479591836,
+      "diff_vs_xgboost_baseline_ci_high": 0.04195153061224488,
+      "diff_vs_xgboost_baseline_share_le_0": 0.0
+    }
+  ],
+  "selected_candidate": {
+    "model": "ensemble_enhanced",
+    "description": "equal-weight forest + boosting probabilities",
+    "validation_auc": 0.9252933673469388,
+    "note": "Highest validation AUC among the four enhanced finalists. Selecting on validation makes this score slightly optimistic. No test predictions were generated."
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.18.1",
+    "xgboost": "3.4.1",
+    "joblib": "1.6.0"
+  },
+  "runtime_seconds": {
+    "stages 1-2": 42.3,
+    "stage 3": 1664.2,
+    "stage 4": 473.8,
+    "stage 5": 862.7,
+    "stage 6": 309.0,
+    "total": 3352.4
+  }
+}

@@ -1,0 +1,33 @@
+|--- f0289 <= 0.492779
+|   |--- f0443 <= 0.536896
+|   |   |--- f0489 <= 0.819503
+|   |   |   |--- weights: [86.000000, 554.000000] class: 1
+|   |   |--- f0489 >  0.819503
+|   |   |   |--- weights: [57.000000, 30.000000] class: 0
+|   |--- f0443 >  0.536896
+|   |   |--- f0056 <= 0.373869
+|   |   |   |--- weights: [153.000000, 209.000000] class: 1
+|   |   |--- f0056 >  0.373869
+|   |   |   |--- weights: [192.000000, 77.000000] class: 0
+|--- f0289 >  0.492779
+|   |--- f0109 <= 0.666230
+|   |   |--- f0203 <= 0.543097
+|   |   |   |--- weights: [105.000000, 165.000000] class: 1
+|   |   |--- f0203 >  0.543097
+|   |   |   |--- weights: [322.000000, 153.000000] class: 0
+|   |--- f0109 >  0.666230
+|   |   |--- f0304 <= 0.313941
+|   |   |   |--- weights: [95.000000, 49.000000] class: 0
+|   |   |--- f0304 >  0.313941
+|   |   |   |--- weights: [250.000000, 23.000000] class: 0
+
+Thresholds above are rounded for display. Weights are [nonmatches, matches].
+Leaf node IDs correspond to tree.png; probabilities use training labels.
+Node 3: n=640, nonmatches=86, matches=554, P(target=1)=0.865625
+Node 4: n=87, nonmatches=57, matches=30, P(target=1)=0.344828
+Node 6: n=362, nonmatches=153, matches=209, P(target=1)=0.577348
+Node 7: n=269, nonmatches=192, matches=77, P(target=1)=0.286245
+Node 10: n=270, nonmatches=105, matches=165, P(target=1)=0.611111
+Node 11: n=475, nonmatches=322, matches=153, P(target=1)=0.322105
+Node 13: n=144, nonmatches=95, matches=49, P(target=1)=0.340278
+Node 14: n=273, nonmatches=250, matches=23, P(target=1)=0.084249

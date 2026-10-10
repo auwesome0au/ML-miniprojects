@@ -1,0 +1,80 @@
+{
+  "source": "train.csv only",
+  "source_sha256": "71df77b6d36c0560c434839a6793b728af2a658f4180125b7fc845f00394ea5f",
+  "rows": 2520,
+  "features": 512,
+  "target_counts": {
+    "0": 1260,
+    "1": 1260
+  },
+  "missing_feature_values": 0,
+  "nonfinite_feature_values": 0,
+  "negative_feature_values": 0,
+  "missing_or_blank_ids": 0,
+  "duplicate_ids": 0,
+  "duplicate_feature_rows": 0,
+  "duplicate_feature_rows_after_rounding_6_decimals": 0,
+  "duplicate_feature_columns": 0,
+  "constant_features": 0,
+  "all_zero_rows": 0,
+  "zero_cell_fraction": 0.0065073164682539686,
+  "max_feature_zero_fraction": 0.07658730158730159,
+  "max_feature_single_value_fraction": 0.07658730158730159,
+  "feature_std_range": [
+    0.29067726391552734,
+    1.4211127757149968
+  ],
+  "feature_skewness_range": [
+    1.1900377940517681,
+    5.7440371507305
+  ],
+  "max_absolute_pearson_correlation": 0.5859294689207557,
+  "feature_pairs_abs_pearson_above_0_8": 0,
+  "iqr_flagged_cell_fraction": 0.05461619543650793,
+  "rows_with_any_iqr_flag": 2182,
+  "features_auc_below_0_5": 512,
+  "best_single_feature": "f0171",
+  "best_single_feature_oriented_training_auc": 0.700234945830184,
+  "aggregate_means_by_class": {
+    "0": {
+      "mean": 0.6485418105217883,
+      "median": 0.43279795889103173,
+      "std": 0.6859927436312576,
+      "l2_norm": 21.36534581953056,
+      "maximum": 4.898116144992064,
+      "zero_fraction": 0.002698722718253968
+    },
+    "1": {
+      "mean": 0.3992401020995303,
+      "median": 0.2623599566978889,
+      "std": 0.4272184697319561,
+      "l2_norm": 13.236530751598439,
+      "maximum": 2.999430572319762,
+      "zero_fraction": 0.010315910218253968
+    }
+  },
+  "aggregate_auc_higher_value_predicts_match": {
+    "mean": 0.1637874779541446,
+    "median": 0.16705719324766943,
+    "std": 0.17344419249181153,
+    "l2_norm": 0.1672140337616528,
+    "maximum": 0.1941880826404636,
+    "zero_fraction": 0.7180946082136559
+  },
+  "aggregate_auc_best_direction_train_only": {
+    "mean": 0.8362125220458554,
+    "median": 0.8329428067523306,
+    "std": 0.8265558075081885,
+    "l2_norm": 0.8327859662383472,
+    "maximum": 0.8058119173595364,
+    "zero_fraction": 0.7180946082136559
+  },
+  "limitations": [
+    "Training-only target associations are descriptive, not generalisation estimates.",
+    "Direction and feature rankings use training labels; no significance testing performed.",
+    "Low pairwise Pearson correlation does not exclude multivariate or nonlinear redundancy.",
+    "IQR flags identify tail values, not confirmed errors; no rows were removed.",
+    "No hidden entity IDs are available to establish row independence.",
+    "This audit does not measure label noise or train-validation distribution shift."
+  ]
+}

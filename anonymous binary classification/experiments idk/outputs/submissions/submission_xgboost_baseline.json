@@ -1,0 +1,49 @@
+{
+  "solution": "XGBoost baseline (boosting.py configuration)",
+  "model_params": {
+    "n_estimators": 100,
+    "max_depth": 3,
+    "learning_rate": 0.05,
+    "min_child_weight": 1,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.0,
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "tree_method": "hist",
+    "device": "cpu",
+    "importance_type": "gain",
+    "random_state": 42,
+    "n_jobs": 4
+  },
+  "fitted_on": "train.csv only (2520 rows)",
+  "validation_auc_check": 0.8955102040816326,
+  "test_usage": "Predictions only; no fitting or statistics on test rows",
+  "submission_file": "submission_xgboost_baseline.csv",
+  "submission_sha256": "7f9bb2e99351c1441a155eb60bab6162d34c6223824580364cb758402fec0af3",
+  "rows": 1116,
+  "columns": [
+    "row_id",
+    "target"
+  ],
+  "row_order": "Same as sample_submission.csv",
+  "target_range": [
+    0.03339139372110367,
+    0.9785388112068176
+  ],
+  "input_sha256": {
+    "train.csv": "71df77b6d36c0560c434839a6793b728af2a658f4180125b7fc845f00394ea5f",
+    "validation.csv": "cc4d6398ac8735bf9792b46e779905d097d23c9acc9f17b5c084c5ade2ff3400",
+    "test.csv": "156a1c2f8a68f5076aae40e8454538d25de7f42f32ee08ac2d1d715b6c9853a4",
+    "sample_submission.csv": "f1b53a65b5189605bcb5d0b65b6c8cdda0bf67f85918581be245a254d074e834"
+  },
+  "created_utc": "2026-09-19T17:14:02+00:00",
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.4.1"
+  }
+}

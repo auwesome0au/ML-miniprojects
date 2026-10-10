@@ -1,0 +1,1211 @@
+stage,family,name,fold,auc
+1-calibration,tree,0 baseline,0,0.7367331191735954
+1-calibration,tree,0 baseline,1,0.6954365079365079
+1-calibration,tree,0 baseline,2,0.7236315822625345
+1-calibration,tree,0 baseline,3,0.7358670319979844
+1-calibration,tree,0 baseline,4,0.7323003275384228
+1-calibration,tree,0 baseline,5,0.7162698412698413
+1-calibration,tree,0 baseline,6,0.737591332829428
+1-calibration,tree,0 baseline,7,0.7090813177122701
+1-calibration,tree,0 baseline,8,0.7312610229276896
+1-calibration,tree,0 baseline,9,0.7354654824892921
+2-ladder,tree,1 +row mean,0,0.800477135298564
+2-ladder,tree,1 +row mean,1,0.832262534643487
+2-ladder,tree,1 +row mean,2,0.8037446460065507
+2-ladder,tree,1 +row mean,3,0.8190980095742
+2-ladder,tree,1 +row mean,4,0.8106103552532125
+2-ladder,tree,1 +row mean,5,0.8054768203577727
+2-ladder,tree,1 +row mean,6,0.8187751952632906
+2-ladder,tree,1 +row mean,7,0.7970206601158982
+2-ladder,tree,1 +row mean,8,0.804335159989922
+2-ladder,tree,1 +row mean,9,0.8397974930713026
+2-ladder,tree,2 +six row summaries,0,0.8227985638699924
+2-ladder,tree,2 +six row summaries,1,0.8324672461577224
+2-ladder,tree,2 +six row summaries,2,0.8050516502897456
+2-ladder,tree,2 +six row summaries,3,0.8190980095742
+2-ladder,tree,2 +six row summaries,4,0.8069491685563114
+2-ladder,tree,2 +six row summaries,5,0.8138384983623078
+2-ladder,tree,2 +six row summaries,6,0.812586608717561
+2-ladder,tree,2 +six row summaries,7,0.8161296926177879
+2-ladder,tree,2 +six row summaries,8,0.8172871000251953
+2-ladder,tree,2 +six row summaries,9,0.8237591332829428
+2-ladder,tree,4 +monotone constraints,0,0.8313492063492063
+2-ladder,tree,4 +monotone constraints,1,0.8279163517258755
+2-ladder,tree,4 +monotone constraints,2,0.8105946082136558
+2-ladder,tree,4 +monotone constraints,3,0.8284123834719073
+2-ladder,tree,4 +monotone constraints,4,0.8280187074829931
+2-ladder,tree,4 +monotone constraints,5,0.8220820735701689
+2-ladder,tree,4 +monotone constraints,6,0.8129015495086923
+2-ladder,tree,4 +monotone constraints,7,0.8176492819349963
+2-ladder,tree,4 +monotone constraints,8,0.827955719324767
+2-ladder,tree,4 +monotone constraints,9,0.8419154698916603
+1-calibration,forest,0 baseline,0,0.8786690602166793
+1-calibration,forest,0 baseline,1,0.8726221970269589
+1-calibration,forest,0 baseline,2,0.8546233308138068
+1-calibration,forest,0 baseline,3,0.8927311665406904
+1-calibration,forest,0 baseline,4,0.8796296296296297
+1-calibration,forest,0 baseline,5,0.8821019148400102
+1-calibration,forest,0 baseline,6,0.8745433358528597
+1-calibration,forest,0 baseline,7,0.8568909045099522
+1-calibration,forest,0 baseline,8,0.8869362559838749
+1-calibration,forest,0 baseline,9,0.9003212396069539
+2-ladder,forest,1 +row mean,0,0.8800233056185438
+2-ladder,forest,1 +row mean,1,0.8721812799193751
+2-ladder,forest,1 +row mean,2,0.8614103048626857
+2-ladder,forest,1 +row mean,3,0.8921800201562107
+2-ladder,forest,1 +row mean,4,0.8804012345679011
+2-ladder,forest,1 +row mean,5,0.8739764424288234
+2-ladder,forest,1 +row mean,6,0.8724489795918369
+2-ladder,forest,1 +row mean,7,0.8501984126984126
+2-ladder,forest,1 +row mean,8,0.8867630385487528
+2-ladder,forest,1 +row mean,9,0.8961167800453516
+2-ladder,forest,2 +six row summaries,0,0.8719135802469136
+2-ladder,forest,2 +six row summaries,1,0.8672996976568405
+2-ladder,forest,2 +six row summaries,2,0.8553634416729655
+2-ladder,forest,2 +six row summaries,3,0.886148904006047
+2-ladder,forest,2 +six row summaries,4,0.8726064499874024
+2-ladder,forest,2 +six row summaries,5,0.8684492315444696
+2-ladder,forest,2 +six row summaries,6,0.8642132779037541
+2-ladder,forest,2 +six row summaries,7,0.8520565633660871
+2-ladder,forest,2 +six row summaries,8,0.8815192743764173
+2-ladder,forest,2 +six row summaries,9,0.8917233560090703
+2-ladder,forest,3 +max_features 0.2,0,0.861331569664903
+2-ladder,forest,3 +max_features 0.2,1,0.8619771982867221
+2-ladder,forest,3 +max_features 0.2,2,0.8450018896447469
+2-ladder,forest,3 +max_features 0.2,3,0.8753779289493575
+2-ladder,forest,3 +max_features 0.2,4,0.8611111111111112
+2-ladder,forest,3 +max_features 0.2,5,0.8576782564877803
+2-ladder,forest,3 +max_features 0.2,6,0.8540249433106575
+2-ladder,forest,3 +max_features 0.2,7,0.8446869488536156
+2-ladder,forest,3 +max_features 0.2,8,0.8687641723356009
+2-ladder,forest,3 +max_features 0.2,9,0.8840073066263542
+2-ladder,forest,4 +monotone constraints,0,0.8585443436633913
+2-ladder,forest,4 +monotone constraints,1,0.8535682791635172
+2-ladder,forest,4 +monotone constraints,2,0.8404195011337868
+2-ladder,forest,4 +monotone constraints,3,0.8723702443940539
+2-ladder,forest,4 +monotone constraints,4,0.8587962962962963
+2-ladder,forest,4 +monotone constraints,5,0.8544973544973544
+2-ladder,forest,4 +monotone constraints,6,0.8486394557823129
+2-ladder,forest,4 +monotone constraints,7,0.8375220458553793
+2-ladder,forest,4 +monotone constraints,8,0.8641975308641975
+2-ladder,forest,4 +monotone constraints,9,0.8791887125220459
+1-calibration,boosting,0 baseline,0,0.9057697152935248
+1-calibration,boosting,0 baseline,1,0.8860701688082638
+1-calibration,boosting,0 baseline,2,0.8842907533383724
+1-calibration,boosting,0 baseline,3,0.9070924666162762
+1-calibration,boosting,0 baseline,4,0.8900069286974049
+1-calibration,boosting,0 baseline,5,0.887440161249685
+1-calibration,boosting,0 baseline,6,0.890180146132527
+1-calibration,boosting,0 baseline,7,0.8672682035777274
+1-calibration,boosting,0 baseline,8,0.8956443688586545
+1-calibration,boosting,0 baseline,9,0.9084624590576972
+2-ladder,boosting,1 +row mean,0,0.8988095238095238
+2-ladder,boosting,1 +row mean,1,0.8845742000503904
+2-ladder,boosting,1 +row mean,2,0.8813145628621818
+2-ladder,boosting,1 +row mean,3,0.8985890652557319
+2-ladder,boosting,1 +row mean,4,0.882716049382716
+2-ladder,boosting,1 +row mean,5,0.8821963970773494
+2-ladder,boosting,1 +row mean,6,0.8869520030234316
+2-ladder,boosting,1 +row mean,7,0.8627488032249937
+2-ladder,boosting,1 +row mean,8,0.894116906021668
+2-ladder,boosting,1 +row mean,9,0.9106198034769464
+2-ladder,boosting,2 +six row summaries,0,0.892164273116654
+2-ladder,boosting,2 +six row summaries,1,0.8821019148400101
+2-ladder,boosting,2 +six row summaries,2,0.879109977324263
+2-ladder,boosting,2 +six row summaries,3,0.8986363063744016
+2-ladder,boosting,2 +six row summaries,4,0.877991937515747
+2-ladder,boosting,2 +six row summaries,5,0.8848891408415218
+2-ladder,boosting,2 +six row summaries,6,0.8837553539934493
+2-ladder,boosting,2 +six row summaries,7,0.8629377676996725
+2-ladder,boosting,2 +six row summaries,8,0.891912320483749
+2-ladder,boosting,2 +six row summaries,9,0.9074861426051901
+2-ladder,boosting,4 +monotone constraints,0,0.8896762408667169
+2-ladder,boosting,4 +monotone constraints,1,0.8797556059460822
+2-ladder,boosting,4 +monotone constraints,2,0.8681027966742253
+2-ladder,boosting,4 +monotone constraints,3,0.8935815066767447
+2-ladder,boosting,4 +monotone constraints,4,0.8789840010078105
+2-ladder,boosting,4 +monotone constraints,5,0.8828892668178383
+2-ladder,boosting,4 +monotone constraints,6,0.8730788611740994
+2-ladder,boosting,4 +monotone constraints,7,0.863851095993953
+2-ladder,boosting,4 +monotone constraints,8,0.8870149911816577
+2-ladder,boosting,4 +monotone constraints,9,0.900100781053162
+3-grid,tree,"depth 3, leaf 10, ccp 0.0",0,0.8313492063492063
+3-grid,tree,"depth 3, leaf 10, ccp 0.0",1,0.8279163517258755
+3-grid,tree,"depth 3, leaf 10, ccp 0.0",2,0.8105946082136558
+3-grid,tree,"depth 3, leaf 10, ccp 0.0",3,0.8284123834719073
+3-grid,tree,"depth 3, leaf 10, ccp 0.0",4,0.8280187074829931
+3-grid,tree,"depth 3, leaf 10, ccp 0.0",5,0.8220820735701689
+3-grid,tree,"depth 3, leaf 10, ccp 0.0",6,0.8129015495086923
+3-grid,tree,"depth 3, leaf 10, ccp 0.0",7,0.8192318594104309
+3-grid,tree,"depth 3, leaf 10, ccp 0.0",8,0.827955719324767
+3-grid,tree,"depth 3, leaf 10, ccp 0.0",9,0.8421359284454523
+3-grid,tree,"depth 3, leaf 10, ccp 0.001",0,0.8302154195011338
+3-grid,tree,"depth 3, leaf 10, ccp 0.001",1,0.8275777903754095
+3-grid,tree,"depth 3, leaf 10, ccp 0.001",2,0.8101694381456287
+3-grid,tree,"depth 3, leaf 10, ccp 0.001",3,0.8280423280423281
+3-grid,tree,"depth 3, leaf 10, ccp 0.001",4,0.8274124464600654
+3-grid,tree,"depth 3, leaf 10, ccp 0.001",5,0.8220820735701689
+3-grid,tree,"depth 3, leaf 10, ccp 0.001",6,0.8126181027966741
+3-grid,tree,"depth 3, leaf 10, ccp 0.001",7,0.8179642227261275
+3-grid,tree,"depth 3, leaf 10, ccp 0.001",8,0.827955719324767
+3-grid,tree,"depth 3, leaf 10, ccp 0.001",9,0.8420099521289997
+3-grid,tree,"depth 3, leaf 10, ccp 0.003",0,0.8302154195011338
+3-grid,tree,"depth 3, leaf 10, ccp 0.003",1,0.8275777903754095
+3-grid,tree,"depth 3, leaf 10, ccp 0.003",2,0.8101694381456287
+3-grid,tree,"depth 3, leaf 10, ccp 0.003",3,0.8280423280423281
+3-grid,tree,"depth 3, leaf 10, ccp 0.003",4,0.8274124464600654
+3-grid,tree,"depth 3, leaf 10, ccp 0.003",5,0.8223182791635173
+3-grid,tree,"depth 3, leaf 10, ccp 0.003",6,0.8126181027966741
+3-grid,tree,"depth 3, leaf 10, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 3, leaf 10, ccp 0.003",8,0.8272785966238347
+3-grid,tree,"depth 3, leaf 10, ccp 0.003",9,0.8321837994457042
+3-grid,tree,"depth 3, leaf 20, ccp 0.0",0,0.8313492063492063
+3-grid,tree,"depth 3, leaf 20, ccp 0.0",1,0.8279163517258755
+3-grid,tree,"depth 3, leaf 20, ccp 0.0",2,0.8105946082136558
+3-grid,tree,"depth 3, leaf 20, ccp 0.0",3,0.8284123834719073
+3-grid,tree,"depth 3, leaf 20, ccp 0.0",4,0.8280187074829931
+3-grid,tree,"depth 3, leaf 20, ccp 0.0",5,0.8220820735701689
+3-grid,tree,"depth 3, leaf 20, ccp 0.0",6,0.8129015495086923
+3-grid,tree,"depth 3, leaf 20, ccp 0.0",7,0.8192318594104309
+3-grid,tree,"depth 3, leaf 20, ccp 0.0",8,0.827955719324767
+3-grid,tree,"depth 3, leaf 20, ccp 0.0",9,0.8419154698916603
+3-grid,tree,"depth 3, leaf 20, ccp 0.001",0,0.8302154195011338
+3-grid,tree,"depth 3, leaf 20, ccp 0.001",1,0.8275777903754095
+3-grid,tree,"depth 3, leaf 20, ccp 0.001",2,0.8101694381456287
+3-grid,tree,"depth 3, leaf 20, ccp 0.001",3,0.8280423280423281
+3-grid,tree,"depth 3, leaf 20, ccp 0.001",4,0.8274124464600654
+3-grid,tree,"depth 3, leaf 20, ccp 0.001",5,0.8220820735701689
+3-grid,tree,"depth 3, leaf 20, ccp 0.001",6,0.8126181027966741
+3-grid,tree,"depth 3, leaf 20, ccp 0.001",7,0.8179642227261275
+3-grid,tree,"depth 3, leaf 20, ccp 0.001",8,0.827955719324767
+3-grid,tree,"depth 3, leaf 20, ccp 0.001",9,0.8420099521289997
+3-grid,tree,"depth 3, leaf 20, ccp 0.003",0,0.8302154195011338
+3-grid,tree,"depth 3, leaf 20, ccp 0.003",1,0.8275777903754095
+3-grid,tree,"depth 3, leaf 20, ccp 0.003",2,0.8101694381456287
+3-grid,tree,"depth 3, leaf 20, ccp 0.003",3,0.8280423280423281
+3-grid,tree,"depth 3, leaf 20, ccp 0.003",4,0.8274124464600654
+3-grid,tree,"depth 3, leaf 20, ccp 0.003",5,0.8223182791635173
+3-grid,tree,"depth 3, leaf 20, ccp 0.003",6,0.8126181027966741
+3-grid,tree,"depth 3, leaf 20, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 3, leaf 20, ccp 0.003",8,0.8272785966238347
+3-grid,tree,"depth 3, leaf 20, ccp 0.003",9,0.8321837994457042
+3-grid,tree,"depth 3, leaf 30, ccp 0.0",0,0.8313492063492063
+3-grid,tree,"depth 3, leaf 30, ccp 0.0",1,0.8279163517258755
+3-grid,tree,"depth 3, leaf 30, ccp 0.0",2,0.8105946082136558
+3-grid,tree,"depth 3, leaf 30, ccp 0.0",3,0.8284123834719073
+3-grid,tree,"depth 3, leaf 30, ccp 0.0",4,0.8280187074829931
+3-grid,tree,"depth 3, leaf 30, ccp 0.0",5,0.8220820735701689
+3-grid,tree,"depth 3, leaf 30, ccp 0.0",6,0.8129015495086923
+3-grid,tree,"depth 3, leaf 30, ccp 0.0",7,0.8176492819349963
+3-grid,tree,"depth 3, leaf 30, ccp 0.0",8,0.827955719324767
+3-grid,tree,"depth 3, leaf 30, ccp 0.0",9,0.8419154698916603
+3-grid,tree,"depth 3, leaf 30, ccp 0.001",0,0.8302154195011338
+3-grid,tree,"depth 3, leaf 30, ccp 0.001",1,0.8275777903754095
+3-grid,tree,"depth 3, leaf 30, ccp 0.001",2,0.8101694381456287
+3-grid,tree,"depth 3, leaf 30, ccp 0.001",3,0.8280423280423281
+3-grid,tree,"depth 3, leaf 30, ccp 0.001",4,0.8274124464600654
+3-grid,tree,"depth 3, leaf 30, ccp 0.001",5,0.8220820735701689
+3-grid,tree,"depth 3, leaf 30, ccp 0.001",6,0.8126181027966741
+3-grid,tree,"depth 3, leaf 30, ccp 0.001",7,0.8179642227261275
+3-grid,tree,"depth 3, leaf 30, ccp 0.001",8,0.827955719324767
+3-grid,tree,"depth 3, leaf 30, ccp 0.001",9,0.8420099521289997
+3-grid,tree,"depth 3, leaf 30, ccp 0.003",0,0.8302154195011338
+3-grid,tree,"depth 3, leaf 30, ccp 0.003",1,0.8275777903754095
+3-grid,tree,"depth 3, leaf 30, ccp 0.003",2,0.8101694381456287
+3-grid,tree,"depth 3, leaf 30, ccp 0.003",3,0.8280423280423281
+3-grid,tree,"depth 3, leaf 30, ccp 0.003",4,0.8274124464600654
+3-grid,tree,"depth 3, leaf 30, ccp 0.003",5,0.8223182791635173
+3-grid,tree,"depth 3, leaf 30, ccp 0.003",6,0.8126181027966741
+3-grid,tree,"depth 3, leaf 30, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 3, leaf 30, ccp 0.003",8,0.8272785966238347
+3-grid,tree,"depth 3, leaf 30, ccp 0.003",9,0.8321837994457042
+3-grid,tree,"depth 4, leaf 10, ccp 0.0",0,0.83765589569161
+3-grid,tree,"depth 4, leaf 10, ccp 0.0",1,0.8444113756613756
+3-grid,tree,"depth 4, leaf 10, ccp 0.0",2,0.8119331065759636
+3-grid,tree,"depth 4, leaf 10, ccp 0.0",3,0.8286800831443688
+3-grid,tree,"depth 4, leaf 10, ccp 0.0",4,0.8312311035525322
+3-grid,tree,"depth 4, leaf 10, ccp 0.0",5,0.8262786596119929
+3-grid,tree,"depth 4, leaf 10, ccp 0.0",6,0.8178539934492316
+3-grid,tree,"depth 4, leaf 10, ccp 0.0",7,0.8204443814562862
+3-grid,tree,"depth 4, leaf 10, ccp 0.0",8,0.825270849080373
+3-grid,tree,"depth 4, leaf 10, ccp 0.0",9,0.8507023179642228
+3-grid,tree,"depth 4, leaf 10, ccp 0.001",0,0.8365850970017636
+3-grid,tree,"depth 4, leaf 10, ccp 0.001",1,0.8428445452254976
+3-grid,tree,"depth 4, leaf 10, ccp 0.001",2,0.810232426303855
+3-grid,tree,"depth 4, leaf 10, ccp 0.001",3,0.8282549130763417
+3-grid,tree,"depth 4, leaf 10, ccp 0.001",4,0.8303177752582515
+3-grid,tree,"depth 4, leaf 10, ccp 0.001",5,0.8268849206349207
+3-grid,tree,"depth 4, leaf 10, ccp 0.001",6,0.8184208868732679
+3-grid,tree,"depth 4, leaf 10, ccp 0.001",7,0.8188224363819602
+3-grid,tree,"depth 4, leaf 10, ccp 0.001",8,0.8253495842781556
+3-grid,tree,"depth 4, leaf 10, ccp 0.001",9,0.8522612748803226
+3-grid,tree,"depth 4, leaf 10, ccp 0.003",0,0.8302154195011338
+3-grid,tree,"depth 4, leaf 10, ccp 0.003",1,0.8406084656084656
+3-grid,tree,"depth 4, leaf 10, ccp 0.003",2,0.8097127739984884
+3-grid,tree,"depth 4, leaf 10, ccp 0.003",3,0.8274596875787353
+3-grid,tree,"depth 4, leaf 10, ccp 0.003",4,0.8298689846308893
+3-grid,tree,"depth 4, leaf 10, ccp 0.003",5,0.8259479717813052
+3-grid,tree,"depth 4, leaf 10, ccp 0.003",6,0.8165706097253715
+3-grid,tree,"depth 4, leaf 10, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 4, leaf 10, ccp 0.003",8,0.8278927311665407
+3-grid,tree,"depth 4, leaf 10, ccp 0.003",9,0.8404667422524565
+3-grid,tree,"depth 4, leaf 20, ccp 0.0",0,0.8377346308893927
+3-grid,tree,"depth 4, leaf 20, ccp 0.0",1,0.8437263794406651
+3-grid,tree,"depth 4, leaf 20, ccp 0.0",2,0.8119646006550769
+3-grid,tree,"depth 4, leaf 20, ccp 0.0",3,0.8270660115898212
+3-grid,tree,"depth 4, leaf 20, ccp 0.0",4,0.8304752456538171
+3-grid,tree,"depth 4, leaf 20, ccp 0.0",5,0.8262550390526582
+3-grid,tree,"depth 4, leaf 20, ccp 0.0",6,0.8178539934492316
+3-grid,tree,"depth 4, leaf 20, ccp 0.0",7,0.8256566515495087
+3-grid,tree,"depth 4, leaf 20, ccp 0.0",8,0.8253495842781556
+3-grid,tree,"depth 4, leaf 20, ccp 0.0",9,0.849143361048123
+3-grid,tree,"depth 4, leaf 20, ccp 0.001",0,0.8365772234819853
+3-grid,tree,"depth 4, leaf 20, ccp 0.001",1,0.8428445452254976
+3-grid,tree,"depth 4, leaf 20, ccp 0.001",2,0.810232426303855
+3-grid,tree,"depth 4, leaf 20, ccp 0.001",3,0.8282549130763417
+3-grid,tree,"depth 4, leaf 20, ccp 0.001",4,0.8300579491055682
+3-grid,tree,"depth 4, leaf 20, ccp 0.001",5,0.8268849206349207
+3-grid,tree,"depth 4, leaf 20, ccp 0.001",6,0.8184208868732679
+3-grid,tree,"depth 4, leaf 20, ccp 0.001",7,0.8237118921642731
+3-grid,tree,"depth 4, leaf 20, ccp 0.001",8,0.8253495842781556
+3-grid,tree,"depth 4, leaf 20, ccp 0.001",9,0.8521667926429832
+3-grid,tree,"depth 4, leaf 20, ccp 0.003",0,0.8302154195011338
+3-grid,tree,"depth 4, leaf 20, ccp 0.003",1,0.8406084656084656
+3-grid,tree,"depth 4, leaf 20, ccp 0.003",2,0.8097127739984884
+3-grid,tree,"depth 4, leaf 20, ccp 0.003",3,0.8274596875787353
+3-grid,tree,"depth 4, leaf 20, ccp 0.003",4,0.829609158478206
+3-grid,tree,"depth 4, leaf 20, ccp 0.003",5,0.8259479717813052
+3-grid,tree,"depth 4, leaf 20, ccp 0.003",6,0.8165706097253715
+3-grid,tree,"depth 4, leaf 20, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 4, leaf 20, ccp 0.003",8,0.8278927311665407
+3-grid,tree,"depth 4, leaf 20, ccp 0.003",9,0.8404667422524565
+3-grid,tree,"depth 4, leaf 30, ccp 0.0",0,0.837348828420257
+3-grid,tree,"depth 4, leaf 30, ccp 0.0",1,0.8430964978584026
+3-grid,tree,"depth 4, leaf 30, ccp 0.0",2,0.8118150037792895
+3-grid,tree,"depth 4, leaf 30, ccp 0.0",3,0.8237591332829428
+3-grid,tree,"depth 4, leaf 30, ccp 0.0",4,0.8305067397329302
+3-grid,tree,"depth 4, leaf 30, ccp 0.0",5,0.8288296800201562
+3-grid,tree,"depth 4, leaf 30, ccp 0.0",6,0.8173500881834216
+3-grid,tree,"depth 4, leaf 30, ccp 0.0",7,0.8240740740740741
+3-grid,tree,"depth 4, leaf 30, ccp 0.0",8,0.8256723985890652
+3-grid,tree,"depth 4, leaf 30, ccp 0.0",9,0.8479859536407156
+3-grid,tree,"depth 4, leaf 30, ccp 0.001",0,0.8365772234819853
+3-grid,tree,"depth 4, leaf 30, ccp 0.001",1,0.8423721340388007
+3-grid,tree,"depth 4, leaf 30, ccp 0.001",2,0.810232426303855
+3-grid,tree,"depth 4, leaf 30, ccp 0.001",3,0.8250425170068029
+3-grid,tree,"depth 4, leaf 30, ccp 0.001",4,0.8300894431846814
+3-grid,tree,"depth 4, leaf 30, ccp 0.001",5,0.8268849206349207
+3-grid,tree,"depth 4, leaf 30, ccp 0.001",6,0.8166572184429327
+3-grid,tree,"depth 4, leaf 30, ccp 0.001",7,0.8237118921642731
+3-grid,tree,"depth 4, leaf 30, ccp 0.001",8,0.8285383597883599
+3-grid,tree,"depth 4, leaf 30, ccp 0.001",9,0.8517809901738473
+3-grid,tree,"depth 4, leaf 30, ccp 0.003",0,0.8302154195011338
+3-grid,tree,"depth 4, leaf 30, ccp 0.003",1,0.8406084656084656
+3-grid,tree,"depth 4, leaf 30, ccp 0.003",2,0.8097127739984884
+3-grid,tree,"depth 4, leaf 30, ccp 0.003",3,0.8274596875787353
+3-grid,tree,"depth 4, leaf 30, ccp 0.003",4,0.829609158478206
+3-grid,tree,"depth 4, leaf 30, ccp 0.003",5,0.8259479717813052
+3-grid,tree,"depth 4, leaf 30, ccp 0.003",6,0.8165706097253715
+3-grid,tree,"depth 4, leaf 30, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 4, leaf 30, ccp 0.003",8,0.8278927311665407
+3-grid,tree,"depth 4, leaf 30, ccp 0.003",9,0.8404667422524565
+3-grid,tree,"depth 5, leaf 10, ccp 0.0",0,0.8359867094986143
+3-grid,tree,"depth 5, leaf 10, ccp 0.0",1,0.8448759133282944
+3-grid,tree,"depth 5, leaf 10, ccp 0.0",2,0.8227906903502143
+3-grid,tree,"depth 5, leaf 10, ccp 0.0",3,0.8330183925422021
+3-grid,tree,"depth 5, leaf 10, ccp 0.0",4,0.8254755605946081
+3-grid,tree,"depth 5, leaf 10, ccp 0.0",5,0.8277273872511968
+3-grid,tree,"depth 5, leaf 10, ccp 0.0",6,0.8172634794658604
+3-grid,tree,"depth 5, leaf 10, ccp 0.0",7,0.8235386747291509
+3-grid,tree,"depth 5, leaf 10, ccp 0.0",8,0.8208695515243134
+3-grid,tree,"depth 5, leaf 10, ccp 0.0",9,0.850765306122449
+3-grid,tree,"depth 5, leaf 10, ccp 0.001",0,0.8345458553791887
+3-grid,tree,"depth 5, leaf 10, ccp 0.001",1,0.8426083396321491
+3-grid,tree,"depth 5, leaf 10, ccp 0.001",2,0.8230662635424542
+3-grid,tree,"depth 5, leaf 10, ccp 0.001",3,0.831593285462333
+3-grid,tree,"depth 5, leaf 10, ccp 0.001",4,0.8294753086419753
+3-grid,tree,"depth 5, leaf 10, ccp 0.001",5,0.8268849206349207
+3-grid,tree,"depth 5, leaf 10, ccp 0.001",6,0.8172004913076342
+3-grid,tree,"depth 5, leaf 10, ccp 0.001",7,0.8221923028470648
+3-grid,tree,"depth 5, leaf 10, ccp 0.001",8,0.8253180901990426
+3-grid,tree,"depth 5, leaf 10, ccp 0.001",9,0.8530171327790376
+3-grid,tree,"depth 5, leaf 10, ccp 0.003",0,0.828546233308138
+3-grid,tree,"depth 5, leaf 10, ccp 0.003",1,0.8406084656084656
+3-grid,tree,"depth 5, leaf 10, ccp 0.003",2,0.8195546737213404
+3-grid,tree,"depth 5, leaf 10, ccp 0.003",3,0.8274596875787353
+3-grid,tree,"depth 5, leaf 10, ccp 0.003",4,0.829609158478206
+3-grid,tree,"depth 5, leaf 10, ccp 0.003",5,0.8259479717813052
+3-grid,tree,"depth 5, leaf 10, ccp 0.003",6,0.8165706097253715
+3-grid,tree,"depth 5, leaf 10, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 5, leaf 10, ccp 0.003",8,0.8278927311665407
+3-grid,tree,"depth 5, leaf 10, ccp 0.003",9,0.8404667422524565
+3-grid,tree,"depth 5, leaf 20, ccp 0.0",0,0.8344198790627362
+3-grid,tree,"depth 5, leaf 20, ccp 0.0",1,0.8447735575711766
+3-grid,tree,"depth 5, leaf 20, ccp 0.0",2,0.8261211892164273
+3-grid,tree,"depth 5, leaf 20, ccp 0.0",3,0.8324672461577224
+3-grid,tree,"depth 5, leaf 20, ccp 0.0",4,0.8248692995716805
+3-grid,tree,"depth 5, leaf 20, ccp 0.0",5,0.8270423910304863
+3-grid,tree,"depth 5, leaf 20, ccp 0.0",6,0.8166257243638196
+3-grid,tree,"depth 5, leaf 20, ccp 0.0",7,0.8240819475938524
+3-grid,tree,"depth 5, leaf 20, ccp 0.0",8,0.8195153061224489
+3-grid,tree,"depth 5, leaf 20, ccp 0.0",9,0.8525998362307885
+3-grid,tree,"depth 5, leaf 20, ccp 0.001",0,0.8341836734693877
+3-grid,tree,"depth 5, leaf 20, ccp 0.001",1,0.843364197530864
+3-grid,tree,"depth 5, leaf 20, ccp 0.001",2,0.8249637818090199
+3-grid,tree,"depth 5, leaf 20, ccp 0.001",3,0.831593285462333
+3-grid,tree,"depth 5, leaf 20, ccp 0.001",4,0.8296485260770975
+3-grid,tree,"depth 5, leaf 20, ccp 0.001",5,0.8268849206349207
+3-grid,tree,"depth 5, leaf 20, ccp 0.001",6,0.8172004913076342
+3-grid,tree,"depth 5, leaf 20, ccp 0.001",7,0.8214128243890149
+3-grid,tree,"depth 5, leaf 20, ccp 0.001",8,0.8252787226001511
+3-grid,tree,"depth 5, leaf 20, ccp 0.001",9,0.8526864449483498
+3-grid,tree,"depth 5, leaf 20, ccp 0.003",0,0.828546233308138
+3-grid,tree,"depth 5, leaf 20, ccp 0.003",1,0.8406084656084656
+3-grid,tree,"depth 5, leaf 20, ccp 0.003",2,0.8195546737213404
+3-grid,tree,"depth 5, leaf 20, ccp 0.003",3,0.8274596875787353
+3-grid,tree,"depth 5, leaf 20, ccp 0.003",4,0.829609158478206
+3-grid,tree,"depth 5, leaf 20, ccp 0.003",5,0.8259479717813052
+3-grid,tree,"depth 5, leaf 20, ccp 0.003",6,0.8165706097253715
+3-grid,tree,"depth 5, leaf 20, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 5, leaf 20, ccp 0.003",8,0.8278927311665407
+3-grid,tree,"depth 5, leaf 20, ccp 0.003",9,0.8404667422524565
+3-grid,tree,"depth 5, leaf 30, ccp 0.0",0,0.8418052406147644
+3-grid,tree,"depth 5, leaf 30, ccp 0.0",1,0.8435137944066515
+3-grid,tree,"depth 5, leaf 30, ccp 0.0",2,0.8268770471151423
+3-grid,tree,"depth 5, leaf 30, ccp 0.0",3,0.8310815066767447
+3-grid,tree,"depth 5, leaf 30, ccp 0.0",4,0.8255149281934997
+3-grid,tree,"depth 5, leaf 30, ccp 0.0",5,0.8272234819853866
+3-grid,tree,"depth 5, leaf 30, ccp 0.0",6,0.8161848072562359
+3-grid,tree,"depth 5, leaf 30, ccp 0.0",7,0.8274754346182918
+3-grid,tree,"depth 5, leaf 30, ccp 0.0",8,0.821192365835223
+3-grid,tree,"depth 5, leaf 30, ccp 0.0",9,0.8515369110607207
+3-grid,tree,"depth 5, leaf 30, ccp 0.001",0,0.8380968127991937
+3-grid,tree,"depth 5, leaf 30, ccp 0.001",1,0.843364197530864
+3-grid,tree,"depth 5, leaf 30, ccp 0.001",2,0.8260424540186444
+3-grid,tree,"depth 5, leaf 30, ccp 0.001",3,0.831593285462333
+3-grid,tree,"depth 5, leaf 30, ccp 0.001",4,0.8296800201562107
+3-grid,tree,"depth 5, leaf 30, ccp 0.001",5,0.8268849206349207
+3-grid,tree,"depth 5, leaf 30, ccp 0.001",6,0.8160037163013353
+3-grid,tree,"depth 5, leaf 30, ccp 0.001",7,0.8243024061476443
+3-grid,tree,"depth 5, leaf 30, ccp 0.001",8,0.8289162887377174
+3-grid,tree,"depth 5, leaf 30, ccp 0.001",9,0.8529541446208113
+3-grid,tree,"depth 5, leaf 30, ccp 0.003",0,0.828546233308138
+3-grid,tree,"depth 5, leaf 30, ccp 0.003",1,0.8406084656084656
+3-grid,tree,"depth 5, leaf 30, ccp 0.003",2,0.8195546737213404
+3-grid,tree,"depth 5, leaf 30, ccp 0.003",3,0.8274596875787353
+3-grid,tree,"depth 5, leaf 30, ccp 0.003",4,0.829609158478206
+3-grid,tree,"depth 5, leaf 30, ccp 0.003",5,0.8259479717813052
+3-grid,tree,"depth 5, leaf 30, ccp 0.003",6,0.8165706097253715
+3-grid,tree,"depth 5, leaf 30, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 5, leaf 30, ccp 0.003",8,0.8278927311665407
+3-grid,tree,"depth 5, leaf 30, ccp 0.003",9,0.8404667422524565
+3-grid,tree,"depth 6, leaf 10, ccp 0.0",0,0.8422540312421266
+3-grid,tree,"depth 6, leaf 10, ccp 0.0",1,0.8446948223733939
+3-grid,tree,"depth 6, leaf 10, ccp 0.0",2,0.8142400478710002
+3-grid,tree,"depth 6, leaf 10, ccp 0.0",3,0.8321995464852607
+3-grid,tree,"depth 6, leaf 10, ccp 0.0",4,0.8253259637188208
+3-grid,tree,"depth 6, leaf 10, ccp 0.0",5,0.8283415217939027
+3-grid,tree,"depth 6, leaf 10, ccp 0.0",6,0.8164052658100278
+3-grid,tree,"depth 6, leaf 10, ccp 0.0",7,0.8260188334593098
+3-grid,tree,"depth 6, leaf 10, ccp 0.0",8,0.8230032753842278
+3-grid,tree,"depth 6, leaf 10, ccp 0.0",9,0.8555051650289746
+3-grid,tree,"depth 6, leaf 10, ccp 0.001",0,0.8398289871504157
+3-grid,tree,"depth 6, leaf 10, ccp 0.001",1,0.843080750818846
+3-grid,tree,"depth 6, leaf 10, ccp 0.001",2,0.8122401738473166
+3-grid,tree,"depth 6, leaf 10, ccp 0.001",3,0.8313255857898715
+3-grid,tree,"depth 6, leaf 10, ccp 0.001",4,0.8242315444696396
+3-grid,tree,"depth 6, leaf 10, ccp 0.001",5,0.8268849206349207
+3-grid,tree,"depth 6, leaf 10, ccp 0.001",6,0.8168461829176115
+3-grid,tree,"depth 6, leaf 10, ccp 0.001",7,0.8248299319727891
+3-grid,tree,"depth 6, leaf 10, ccp 0.001",8,0.8221844293272864
+3-grid,tree,"depth 6, leaf 10, ccp 0.001",9,0.8561822877299068
+3-grid,tree,"depth 6, leaf 10, ccp 0.003",0,0.828546233308138
+3-grid,tree,"depth 6, leaf 10, ccp 0.003",1,0.8406084656084656
+3-grid,tree,"depth 6, leaf 10, ccp 0.003",2,0.8097127739984884
+3-grid,tree,"depth 6, leaf 10, ccp 0.003",3,0.8274596875787353
+3-grid,tree,"depth 6, leaf 10, ccp 0.003",4,0.8298689846308893
+3-grid,tree,"depth 6, leaf 10, ccp 0.003",5,0.8259479717813052
+3-grid,tree,"depth 6, leaf 10, ccp 0.003",6,0.8165706097253715
+3-grid,tree,"depth 6, leaf 10, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 6, leaf 10, ccp 0.003",8,0.8278927311665407
+3-grid,tree,"depth 6, leaf 10, ccp 0.003",9,0.8404667422524565
+3-grid,tree,"depth 6, leaf 20, ccp 0.0",0,0.8387345679012346
+3-grid,tree,"depth 6, leaf 20, ccp 0.0",1,0.841427311665407
+3-grid,tree,"depth 6, leaf 20, ccp 0.0",2,0.8243339002267573
+3-grid,tree,"depth 6, leaf 20, ccp 0.0",3,0.8321995464852608
+3-grid,tree,"depth 6, leaf 20, ccp 0.0",4,0.8240898211136306
+3-grid,tree,"depth 6, leaf 20, ccp 0.0",5,0.8305382338120433
+3-grid,tree,"depth 6, leaf 20, ccp 0.0",6,0.8162399218946838
+3-grid,tree,"depth 6, leaf 20, ccp 0.0",7,0.8276407785336356
+3-grid,tree,"depth 6, leaf 20, ccp 0.0",8,0.8211608717561097
+3-grid,tree,"depth 6, leaf 20, ccp 0.0",9,0.8489780171327791
+3-grid,tree,"depth 6, leaf 20, ccp 0.001",0,0.8370496346686822
+3-grid,tree,"depth 6, leaf 20, ccp 0.001",1,0.843080750818846
+3-grid,tree,"depth 6, leaf 20, ccp 0.001",2,0.8232473544973544
+3-grid,tree,"depth 6, leaf 20, ccp 0.001",3,0.8313255857898715
+3-grid,tree,"depth 6, leaf 20, ccp 0.001",4,0.8243339002267573
+3-grid,tree,"depth 6, leaf 20, ccp 0.001",5,0.8268849206349207
+3-grid,tree,"depth 6, leaf 20, ccp 0.001",6,0.816720206601159
+3-grid,tree,"depth 6, leaf 20, ccp 0.001",7,0.8243024061476443
+3-grid,tree,"depth 6, leaf 20, ccp 0.001",8,0.822200176366843
+3-grid,tree,"depth 6, leaf 20, ccp 0.001",9,0.8526864449483498
+3-grid,tree,"depth 6, leaf 20, ccp 0.003",0,0.8302154195011338
+3-grid,tree,"depth 6, leaf 20, ccp 0.003",1,0.8406084656084656
+3-grid,tree,"depth 6, leaf 20, ccp 0.003",2,0.8195546737213404
+3-grid,tree,"depth 6, leaf 20, ccp 0.003",3,0.8274596875787353
+3-grid,tree,"depth 6, leaf 20, ccp 0.003",4,0.8298689846308893
+3-grid,tree,"depth 6, leaf 20, ccp 0.003",5,0.8259479717813052
+3-grid,tree,"depth 6, leaf 20, ccp 0.003",6,0.8165706097253715
+3-grid,tree,"depth 6, leaf 20, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 6, leaf 20, ccp 0.003",8,0.8278927311665407
+3-grid,tree,"depth 6, leaf 20, ccp 0.003",9,0.8404667422524565
+3-grid,tree,"depth 6, leaf 30, ccp 0.0",0,0.8445530990173847
+3-grid,tree,"depth 6, leaf 30, ccp 0.0",1,0.846293146888385
+3-grid,tree,"depth 6, leaf 30, ccp 0.0",2,0.8258298689846307
+3-grid,tree,"depth 6, leaf 30, ccp 0.0",3,0.8324278785588309
+3-grid,tree,"depth 6, leaf 30, ccp 0.0",4,0.8256015369110606
+3-grid,tree,"depth 6, leaf 30, ccp 0.0",5,0.8287115772234819
+3-grid,tree,"depth 6, leaf 30, ccp 0.0",6,0.8166572184429327
+3-grid,tree,"depth 6, leaf 30, ccp 0.0",7,0.8235308012093727
+3-grid,tree,"depth 6, leaf 30, ccp 0.0",8,0.8227277021919879
+3-grid,tree,"depth 6, leaf 30, ccp 0.0",9,0.8518754724111866
+3-grid,tree,"depth 6, leaf 30, ccp 0.001",0,0.8395140463592845
+3-grid,tree,"depth 6, leaf 30, ccp 0.001",1,0.843364197530864
+3-grid,tree,"depth 6, leaf 30, ccp 0.001",2,0.8260424540186444
+3-grid,tree,"depth 6, leaf 30, ccp 0.001",3,0.83206569664903
+3-grid,tree,"depth 6, leaf 30, ccp 0.001",4,0.8263573948097758
+3-grid,tree,"depth 6, leaf 30, ccp 0.001",5,0.8268849206349207
+3-grid,tree,"depth 6, leaf 30, ccp 0.001",6,0.8145864827412446
+3-grid,tree,"depth 6, leaf 30, ccp 0.001",7,0.8219718442932729
+3-grid,tree,"depth 6, leaf 30, ccp 0.001",8,0.8290580120937264
+3-grid,tree,"depth 6, leaf 30, ccp 0.001",9,0.8529541446208113
+3-grid,tree,"depth 6, leaf 30, ccp 0.003",0,0.8302154195011338
+3-grid,tree,"depth 6, leaf 30, ccp 0.003",1,0.8406084656084656
+3-grid,tree,"depth 6, leaf 30, ccp 0.003",2,0.8195546737213404
+3-grid,tree,"depth 6, leaf 30, ccp 0.003",3,0.8274596875787353
+3-grid,tree,"depth 6, leaf 30, ccp 0.003",4,0.8298689846308893
+3-grid,tree,"depth 6, leaf 30, ccp 0.003",5,0.8259479717813052
+3-grid,tree,"depth 6, leaf 30, ccp 0.003",6,0.8165706097253715
+3-grid,tree,"depth 6, leaf 30, ccp 0.003",7,0.8179642227261275
+3-grid,tree,"depth 6, leaf 30, ccp 0.003",8,0.8266959561602419
+3-grid,tree,"depth 6, leaf 30, ccp 0.003",9,0.8404667422524565
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 1",0,0.8837553539934493
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 1",1,0.8739134542705971
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 1",2,0.857253086419753
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 1",3,0.8986363063744016
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 1",4,0.8832199546485261
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 1",5,0.8826530612244897
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 1",6,0.8751889644746789
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 1",7,0.8561507936507936
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 1",8,0.8881960191484002
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 1",9,0.9009196271101032
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 10",0,0.8833301839254221
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 10",1,0.8736772486772488
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 10",2,0.8570326278659611
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 10",3,0.8984001007810531
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 10",4,0.882574326026707
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 10",5,0.8820389266817839
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 10",6,0.8747637944066514
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 10",7,0.8564027462836986
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 10",8,0.8879598135550517
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 10",9,0.9008251448727639
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 30",0,0.8818657092466616
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 30",1,0.8744331065759636
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 30",2,0.8554736709498615
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 30",3,0.8973765432098766
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 30",4,0.8815192743764172
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 30",5,0.8820861678004535
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 30",6,0.8750472411186697
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 30",7,0.8560405643738977
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 30",8,0.8875661375661376
+3-grid,forest,"rf, max_features sqrt, depth 3, leaf 30",9,0.9012188208616779
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 1",0,0.8875818846056941
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 1",1,0.8780076845553036
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 1",2,0.8642605190224238
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 1",3,0.9031084656084656
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 1",4,0.8879755605946082
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 1",5,0.888668430335097
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 1",6,0.8748425296044344
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 1",7,0.8679925673973292
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 1",8,0.8939121945074326
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 1",9,0.9048721340388007
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 10",0,0.8876763668430335
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 10",1,0.8784013605442177
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 10",2,0.8694885361552028
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 10",3,0.9023211136306375
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 10",4,0.8925422020660116
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 10",5,0.8863063744016125
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 10",6,0.8772518266565885
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 10",7,0.868150037792895
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 10",8,0.8904478458049887
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 10",9,0.9074074074074074
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 30",0,0.8836766187956665
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 30",1,0.8755511463844798
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 30",2,0.8573790627362056
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 30",3,0.899486646510456
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 30",4,0.8901958931720837
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 30",5,0.887408667170572
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 30",6,0.8765589569160999
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 30",7,0.8606544469639708
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 30",8,0.8908100277147897
+3-grid,forest,"rf, max_features sqrt, depth 6, leaf 30",9,0.9014077853363567
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 1",0,0.8896289997480473
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 1",1,0.892022549760645
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 1",2,0.8720867976820358
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 1",3,0.9001322751322751
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 1",4,0.8919280675233057
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 1",5,0.8864953388762913
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 1",6,0.8833774250440916
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 1",7,0.8756613756613756
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 1",8,0.8969198790627362
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 1",9,0.9138794406651549
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 10",0,0.8942586293776771
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 10",1,0.8821019148400101
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 10",2,0.8645912068531115
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 10",3,0.9015180146132526
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 10",4,0.8882747543461829
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 10",5,0.8882905013857395
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 10",6,0.8747165532879818
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 10",7,0.8658982111363064
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 10",8,0.8926051902242378
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 10",9,0.9056122448979592
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 30",0,0.8852985638699925
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 30",1,0.8779761904761905
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 30",2,0.8577884857646761
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 30",3,0.8990457294028723
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 30",4,0.8894085411942555
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 30",5,0.8900541698160744
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 30",6,0.8733623078861175
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 30",7,0.8627960443436634
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 30",8,0.8877078609221466
+3-grid,forest,"rf, max_features sqrt, depth 10, leaf 30",9,0.9023526077097506
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 1",0,0.8930776014109347
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 1",1,0.8876763668430335
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 1",2,0.8743228772990678
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 1",3,0.9012424414210128
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 1",4,0.8958884479717814
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 1",5,0.8857079868984632
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 1",6,0.8823538674729152
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 1",7,0.872008062484253
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 1",8,0.8992110733182161
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 1",9,0.9113599143361047
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 10",0,0.8933925422020661
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 10",1,0.8820074326026708
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 10",2,0.8638825900730663
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 10",3,0.9033604182413706
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 10",4,0.8883219954648527
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 10",5,0.8911722096245905
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 10",6,0.8768896447467877
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 10",7,0.8689531368102796
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 10",8,0.8925264550264551
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 10",9,0.9054075333837238
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 30",0,0.8854875283446713
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 30",1,0.8778659611992945
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 30",2,0.8577884857646761
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 30",3,0.8990457294028723
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 30",4,0.8894557823129251
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 30",5,0.8902273872511968
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 30",6,0.8735355253212396
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 30",7,0.8626858150667676
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 30",8,0.887440161249685
+3-grid,forest,"rf, max_features sqrt, depth None, leaf 30",9,0.902336860670194
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 1",0,0.8869677500629882
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 1",1,0.868622448979592
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 1",2,0.8575522801713279
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 1",3,0.8862118921642732
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 1",4,0.884306500377929
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 1",5,0.8786848072562358
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 1",6,0.8809051398337112
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 1",7,0.8507495590828924
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 1",8,0.8805272108843538
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 1",9,0.898730788611741
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 10",0,0.8877393550012598
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 10",1,0.8688429075333837
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 10",2,0.8591427311665407
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 10",3,0.886400856638952
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 10",4,0.8841332829428068
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 10",5,0.878858024691358
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 10",6,0.8806216931216931
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 10",7,0.8516786344167296
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 10",8,0.880873645754598
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 10",9,0.898589065255732
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 30",0,0.8871882086167802
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 30",1,0.8689688838498362
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 30",2,0.8581191735953642
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 30",3,0.8852670697908793
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 30",4,0.8851095993953136
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 30",5,0.8780076845553035
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 30",6,0.8803697404887881
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 30",7,0.8508755353993449
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 30",8,0.8815507684555303
+3-grid,forest,"rf, max_features 0.2, depth 3, leaf 30",9,0.8989984882842026
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 1",0,0.8963214915595867
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 1",1,0.8875031494079113
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 1",2,0.8721970269589318
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 1",3,0.9071397077349459
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 1",4,0.8947782816830436
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 1",5,0.8906053162005542
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 1",6,0.8889046359284454
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 1",7,0.867425673973293
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 1",8,0.8971403376165281
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 1",9,0.9121315192743764
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 10",0,0.8963214915595868
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 10",1,0.8862118921642731
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 10",2,0.8720553036029226
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 10",3,0.9036123708742756
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 10",4,0.8932350718065003
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 10",5,0.8921957671957673
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 10",6,0.8839443184681279
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 10",7,0.8687956664147141
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 10",8,0.8934240362811792
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 10",9,0.9119268077601411
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 30",0,0.8943531116150163
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 30",1,0.8762755102040817
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 30",2,0.8701499118165785
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 30",3,0.8997071050642479
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 30",4,0.8915816326530612
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 30",5,0.8883849836230788
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 30",6,0.8818814562862181
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 30",7,0.8651423532375913
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 30",8,0.8889676240866717
+3-grid,forest,"rf, max_features 0.2, depth 6, leaf 30",9,0.905549256739733
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 1",0,0.9066358024691358
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 1",1,0.892998866213152
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 1",2,0.8788107835726883
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 1",3,0.9101001511715796
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 1",4,0.8983843537414966
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 1",5,0.9010141093474427
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 1",6,0.89025888133031
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 1",7,0.8760393046107331
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 1",8,0.8990772234819853
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 1",9,0.9175957420005039
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 10",0,0.9027620307382213
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 10",1,0.8834876543209877
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 10",2,0.8707640463592844
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 10",3,0.9055020156210632
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 10",4,0.8891565885613505
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 10",5,0.8927311665406903
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 10",6,0.8866528092718569
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 10",7,0.8684807256235828
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 10",8,0.8930146132527084
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 10",9,0.9106355505165029
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 30",0,0.8908257747543461
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 30",1,0.8790784832451499
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 30",2,0.8683232552280171
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 30",3,0.898620559334845
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 30",4,0.8928256487780297
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 30",5,0.8901171579743008
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 30",6,0.8824483497102544
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 30",7,0.8620559334845048
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 30",8,0.890542328042328
+3-grid,forest,"rf, max_features 0.2, depth 10, leaf 30",9,0.9054232804232805
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 1",0,0.9054390274628369
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 1",1,0.8897471025447216
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 1",2,0.8800154320987655
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 1",3,0.9096198664651046
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 1",4,0.896888384983623
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 1",5,0.8975576341647771
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 1",6,0.8920619173595363
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 1",7,0.8733623078861175
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 1",8,0.8985418241370623
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 1",9,0.9128952506928698
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 10",0,0.9015022675736961
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 10",1,0.8838970773494582
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 10",2,0.871504157218443
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 10",3,0.9067617787855883
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 10",4,0.8908415217939027
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 10",5,0.8924319727891157
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 10",6,0.8884479717813051
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 10",7,0.8709215167548501
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 10",8,0.8908257747543462
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 10",9,0.9106198034769463
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 30",0,0.8908257747543461
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 30",1,0.8790784832451499
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 30",2,0.8681815318720081
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 30",3,0.898809523809524
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 30",4,0.8929831191735953
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 30",5,0.8901486520534139
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 30",6,0.882243638196019
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 30",7,0.8620559334845048
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 30",8,0.8904478458049886
+3-grid,forest,"rf, max_features 0.2, depth None, leaf 30",9,0.9054232804232805
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 1",0,0.874748047367095
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 1",1,0.8665753338372386
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 1",2,0.8595521541950113
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 1",3,0.8893613000755858
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 1",4,0.8703546233308138
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 1",5,0.8681342907533384
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 1",6,0.8586545729402872
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 1",7,0.8557886117409926
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 1",8,0.8782911312673217
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 1",9,0.8998015873015872
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 10",0,0.8746693121693122
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 10",1,0.8664021164021164
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 10",2,0.8591269841269842
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 10",3,0.8890778533635677
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 10",4,0.8696775006298816
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 10",5,0.8677563618039809
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 10",6,0.8581034265558075
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 10",7,0.8554579239103048
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 10",8,0.8784643487024439
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 10",9,0.8993291761148905
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 30",0,0.872905643738977
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 30",1,0.865913958175863
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 30",2,0.8570798689846311
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 30",3,0.8881330309901738
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 30",4,0.8691421012849584
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 30",5,0.8674886621315193
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 30",6,0.8561192995716805
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 30",7,0.8543083900226757
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 30",8,0.8780864197530864
+3-grid,forest,"et, max_features sqrt, depth 3, leaf 30",9,0.8992504409171076
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 1",0,0.8822121441169061
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 1",1,0.8773778029730412
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 1",2,0.8690633660871756
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 1",3,0.8964002267573696
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 1",4,0.8790312421264803
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 1",5,0.8819286974048878
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 1",6,0.869661753590325
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 1",7,0.8682130259511212
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 1",8,0.887550390526581
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 1",9,0.9063838498362307
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 10",0,0.8798815822625347
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 10",1,0.87399218946838
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 10",2,0.8623708742756362
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 10",3,0.8946837994457042
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 10",4,0.8803539934492315
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 10",5,0.875362181909801
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 10",6,0.8634889140841522
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 10",7,0.8611426051902242
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 10",8,0.8872511967750063
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 10",9,0.9025100781053161
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 30",0,0.8772203325774754
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 30",1,0.8731418493323255
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 30",2,0.8568436633912825
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 30",3,0.8934082892416226
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 30",4,0.8785115898211137
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 30",5,0.8752834467120182
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 30",6,0.8581664147140338
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 30",7,0.8550327538422777
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 30",8,0.8825113378684807
+3-grid,forest,"et, max_features sqrt, depth 6, leaf 30",9,0.9002267573696145
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 1",0,0.8915816326530612
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 1",1,0.8895817586293777
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 1",2,0.8807319223985891
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 1",3,0.9040375409423029
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 1",4,0.8873141849332326
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 1",5,0.8903218694885361
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 1",6,0.8793934240362813
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 1",7,0.8752991937515746
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 1",8,0.8927784076593601
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 1",9,0.9143675988914084
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 10",0,0.8861174099269338
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 10",1,0.8777557319223986
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 10",2,0.8674571680524061
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 10",3,0.8975970017636685
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 10",4,0.8824955908289243
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 10",5,0.8830309901738473
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 10",6,0.8679925673973293
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 10",7,0.8670792391030485
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 10",8,0.8879755605946082
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 10",9,0.906557067271353
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 30",0,0.8816609977324263
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 30",1,0.873519778281683
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 30",2,0.862166162761401
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 30",3,0.895628621819098
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 30",4,0.8781651549508693
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 30",5,0.8767636684303353
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 30",6,0.858985260770975
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 30",7,0.860103300579491
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 30",8,0.8826373141849333
+3-grid,forest,"et, max_features sqrt, depth 10, leaf 30",9,0.902084908037289
+3-grid,forest,"et, max_features sqrt, depth None, leaf 1",0,0.8966128117913833
+3-grid,forest,"et, max_features sqrt, depth None, leaf 1",1,0.8838498362307886
+3-grid,forest,"et, max_features sqrt, depth None, leaf 1",2,0.8834561602418746
+3-grid,forest,"et, max_features sqrt, depth None, leaf 1",3,0.9023683547493071
+3-grid,forest,"et, max_features sqrt, depth None, leaf 1",4,0.8903612370874276
+3-grid,forest,"et, max_features sqrt, depth None, leaf 1",5,0.8956050012597632
+3-grid,forest,"et, max_features sqrt, depth None, leaf 1",6,0.8827554169816074
+3-grid,forest,"et, max_features sqrt, depth None, leaf 1",7,0.8769683799445704
+3-grid,forest,"et, max_features sqrt, depth None, leaf 1",8,0.9053445452254977
+3-grid,forest,"et, max_features sqrt, depth None, leaf 1",9,0.9131629503653313
+3-grid,forest,"et, max_features sqrt, depth None, leaf 10",0,0.8881330309901738
+3-grid,forest,"et, max_features sqrt, depth None, leaf 10",1,0.8847474174855126
+3-grid,forest,"et, max_features sqrt, depth None, leaf 10",2,0.8666068279163517
+3-grid,forest,"et, max_features sqrt, depth None, leaf 10",3,0.8985103300579491
+3-grid,forest,"et, max_features sqrt, depth None, leaf 10",4,0.8827632905013858
+3-grid,forest,"et, max_features sqrt, depth None, leaf 10",5,0.8806216931216931
+3-grid,forest,"et, max_features sqrt, depth None, leaf 10",6,0.8702286470143613
+3-grid,forest,"et, max_features sqrt, depth None, leaf 10",7,0.8644022423784329
+3-grid,forest,"et, max_features sqrt, depth None, leaf 10",8,0.8870779793398842
+3-grid,forest,"et, max_features sqrt, depth None, leaf 10",9,0.9054075333837238
+3-grid,forest,"et, max_features sqrt, depth None, leaf 30",0,0.880952380952381
+3-grid,forest,"et, max_features sqrt, depth None, leaf 30",1,0.8715986394557823
+3-grid,forest,"et, max_features sqrt, depth None, leaf 30",2,0.8609378936759888
+3-grid,forest,"et, max_features sqrt, depth None, leaf 30",3,0.8952821869488536
+3-grid,forest,"et, max_features sqrt, depth None, leaf 30",4,0.8789997480473671
+3-grid,forest,"et, max_features sqrt, depth None, leaf 30",5,0.8775037792894936
+3-grid,forest,"et, max_features sqrt, depth None, leaf 30",6,0.8611426051902242
+3-grid,forest,"et, max_features sqrt, depth None, leaf 30",7,0.8598828420256992
+3-grid,forest,"et, max_features sqrt, depth None, leaf 30",8,0.8822593852355756
+3-grid,forest,"et, max_features sqrt, depth None, leaf 30",9,0.9022738725119678
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 1",0,0.8775037792894935
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 1",1,0.8736142605190224
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 1",2,0.8637881078357268
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 1",3,0.8985733182161754
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 1",4,0.8802122700932224
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 1",5,0.8773305618543714
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 1",6,0.8761810279667422
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 1",7,0.8563712522045857
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 1",8,0.8883534895439658
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 1",9,0.9021164021164022
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 10",0,0.8779132023179642
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 10",1,0.873519778281683
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 10",2,0.8637723607961704
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 10",3,0.8985733182161754
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 10",4,0.8800075585789873
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 10",5,0.8772518266565885
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 10",6,0.87600781053162
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 10",7,0.8563869992441422
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 10",8,0.8876291257243638
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 10",9,0.9026360544217688
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 30",0,0.8771101033005795
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 30",1,0.8732993197278913
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 30",2,0.8625440917107583
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 30",3,0.898620559334845
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 30",4,0.8803539934492315
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 30",5,0.8766849332325523
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 30",6,0.8756613756613756
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 30",7,0.8557571176618795
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 30",8,0.8870779793398841
+3-grid,forest,"et, max_features 0.2, depth 3, leaf 30",9,0.9017857142857142
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 1",0,0.898730788611741
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 1",1,0.8894085411942554
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 1",2,0.8785588309397834
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 1",3,0.9072814310909549
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 1",4,0.8917076089695137
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 1",5,0.8934240362811792
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 1",6,0.8868732678256488
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 1",7,0.8739764424288233
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 1",8,0.9020219198790627
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 1",9,0.9133912824389014
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 10",0,0.8946365583270346
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 10",1,0.8838183421516754
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 10",2,0.8788422776518015
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 10",3,0.9045256991685564
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 10",4,0.8873771730914588
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 10",5,0.8911249685059209
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 10",6,0.8817869740488788
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 10",7,0.8706853111615016
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 10",8,0.8982741244646006
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 10",9,0.9123047367094985
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 30",0,0.8915816326530612
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 30",1,0.8791729654824892
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 30",2,0.8733308138070043
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 30",3,0.9009983623078861
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 30",4,0.8883062484252962
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 30",5,0.8896604938271606
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 30",6,0.873378054925674
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 30",7,0.8659769463340891
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 30",8,0.8958648274124463
+3-grid,forest,"et, max_features 0.2, depth 6, leaf 30",9,0.9068405139833711
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 1",0,0.9025573192239859
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 1",1,0.8989984882842026
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 1",2,0.8830467372134039
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 1",3,0.9128243890148652
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 1",4,0.8956443688586545
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 1",5,0.9000377928949358
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 1",6,0.8830939783320736
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 1",7,0.8842435122197028
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 1",8,0.9118165784832452
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 1",9,0.9198318216175358
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 10",0,0.8972820609725372
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 10",1,0.884589947089947
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 10",2,0.8771730914588057
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 10",3,0.9093915343915343
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 10",4,0.8904163517258756
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 10",5,0.8957860922146637
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 10",6,0.8824955908289241
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 10",7,0.872401738473167
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 10",8,0.9004787100025196
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 10",9,0.9144148400100781
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 30",0,0.8909202569916856
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 30",1,0.8813932980599648
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 30",2,0.8694727891156463
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 30",3,0.9022266313932981
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 30",4,0.8877236079617031
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 30",5,0.8892353237591333
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 30",6,0.8761652809271856
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 30",7,0.8653943058704963
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 30",8,0.894542076089695
+3-grid,forest,"et, max_features 0.2, depth 10, leaf 30",9,0.9107615268329554
+3-grid,forest,"et, max_features 0.2, depth None, leaf 1",0,0.901494394053918
+3-grid,forest,"et, max_features 0.2, depth None, leaf 1",1,0.8956916099773243
+3-grid,forest,"et, max_features 0.2, depth None, leaf 1",2,0.887605505165029
+3-grid,forest,"et, max_features 0.2, depth None, leaf 1",3,0.9159816704459561
+3-grid,forest,"et, max_features 0.2, depth None, leaf 1",4,0.8977387251196776
+3-grid,forest,"et, max_features 0.2, depth None, leaf 1",5,0.9005023305618544
+3-grid,forest,"et, max_features 0.2, depth None, leaf 1",6,0.889951814058957
+3-grid,forest,"et, max_features 0.2, depth None, leaf 1",7,0.8848733938019652
+3-grid,forest,"et, max_features 0.2, depth None, leaf 1",8,0.9031084656084657
+3-grid,forest,"et, max_features 0.2, depth None, leaf 1",9,0.920587679516251
+3-grid,forest,"et, max_features 0.2, depth None, leaf 10",0,0.897974930713026
+3-grid,forest,"et, max_features 0.2, depth None, leaf 10",1,0.8870622323003277
+3-grid,forest,"et, max_features 0.2, depth None, leaf 10",2,0.8782438901486521
+3-grid,forest,"et, max_features 0.2, depth None, leaf 10",3,0.9033289241622575
+3-grid,forest,"et, max_features 0.2, depth None, leaf 10",4,0.8918650793650793
+3-grid,forest,"et, max_features 0.2, depth None, leaf 10",5,0.8944318468127992
+3-grid,forest,"et, max_features 0.2, depth None, leaf 10",6,0.877377802973041
+3-grid,forest,"et, max_features 0.2, depth None, leaf 10",7,0.8790154950869237
+3-grid,forest,"et, max_features 0.2, depth None, leaf 10",8,0.9002267573696145
+3-grid,forest,"et, max_features 0.2, depth None, leaf 10",9,0.9147612748803227
+3-grid,forest,"et, max_features 0.2, depth None, leaf 30",0,0.8905580750818846
+3-grid,forest,"et, max_features 0.2, depth None, leaf 30",1,0.8807161753590325
+3-grid,forest,"et, max_features 0.2, depth None, leaf 30",2,0.869661753590325
+3-grid,forest,"et, max_features 0.2, depth None, leaf 30",3,0.9028722600151171
+3-grid,forest,"et, max_features 0.2, depth None, leaf 30",4,0.8879283194759384
+3-grid,forest,"et, max_features 0.2, depth None, leaf 30",5,0.8884164777021921
+3-grid,forest,"et, max_features 0.2, depth None, leaf 30",6,0.8757716049382716
+3-grid,forest,"et, max_features 0.2, depth None, leaf 30",7,0.8674571680524061
+3-grid,forest,"et, max_features 0.2, depth None, leaf 30",8,0.8950302343159484
+3-grid,forest,"et, max_features 0.2, depth None, leaf 30",9,0.9096277399848829
+3-grid,boosting,"depth 1, colsample 0.3, weak regularisation",0,0.9029824892920131
+3-grid,boosting,"depth 1, colsample 0.3, weak regularisation",1,0.8960380448475687
+3-grid,boosting,"depth 1, colsample 0.3, weak regularisation",2,0.897612748803225
+3-grid,boosting,"depth 1, colsample 0.3, weak regularisation",3,0.9160682791635172
+3-grid,boosting,"depth 1, colsample 0.3, weak regularisation",4,0.9000220458553791
+3-grid,boosting,"depth 1, colsample 0.3, weak regularisation",5,0.910273368606702
+3-grid,boosting,"depth 1, colsample 0.3, weak regularisation",6,0.8930776014109347
+3-grid,boosting,"depth 1, colsample 0.3, weak regularisation",7,0.8796138825900731
+3-grid,boosting,"depth 1, colsample 0.3, weak regularisation",8,0.91156462585034
+3-grid,boosting,"depth 1, colsample 0.3, weak regularisation",9,0.9118638196019149
+3-grid,boosting,"depth 1, colsample 0.3, strong regularisation",0,0.9033761652809271
+3-grid,boosting,"depth 1, colsample 0.3, strong regularisation",1,0.8915658856135047
+3-grid,boosting,"depth 1, colsample 0.3, strong regularisation",2,0.8964002267573696
+3-grid,boosting,"depth 1, colsample 0.3, strong regularisation",3,0.9114543965734442
+3-grid,boosting,"depth 1, colsample 0.3, strong regularisation",4,0.9010770975056689
+3-grid,boosting,"depth 1, colsample 0.3, strong regularisation",5,0.9116906021667927
+3-grid,boosting,"depth 1, colsample 0.3, strong regularisation",6,0.8954081632653061
+3-grid,boosting,"depth 1, colsample 0.3, strong regularisation",7,0.8794091710758378
+3-grid,boosting,"depth 1, colsample 0.3, strong regularisation",8,0.9099741748551271
+3-grid,boosting,"depth 1, colsample 0.3, strong regularisation",9,0.9123204837490551
+3-grid,boosting,"depth 1, colsample 0.7, weak regularisation",0,0.9032816830435877
+3-grid,boosting,"depth 1, colsample 0.7, weak regularisation",1,0.896636432350718
+3-grid,boosting,"depth 1, colsample 0.7, weak regularisation",2,0.8957388510959939
+3-grid,boosting,"depth 1, colsample 0.7, weak regularisation",3,0.9156588561350466
+3-grid,boosting,"depth 1, colsample 0.7, weak regularisation",4,0.9008723859914336
+3-grid,boosting,"depth 1, colsample 0.7, weak regularisation",5,0.9066515495086924
+3-grid,boosting,"depth 1, colsample 0.7, weak regularisation",6,0.8935500125976318
+3-grid,boosting,"depth 1, colsample 0.7, weak regularisation",7,0.8815035273368607
+3-grid,boosting,"depth 1, colsample 0.7, weak regularisation",8,0.9129503653313177
+3-grid,boosting,"depth 1, colsample 0.7, weak regularisation",9,0.9104938271604939
+3-grid,boosting,"depth 1, colsample 0.7, strong regularisation",0,0.9052500629881582
+3-grid,boosting,"depth 1, colsample 0.7, strong regularisation",1,0.8924162257495591
+3-grid,boosting,"depth 1, colsample 0.7, strong regularisation",2,0.8929988662131519
+3-grid,boosting,"depth 1, colsample 0.7, strong regularisation",3,0.9122732426303856
+3-grid,boosting,"depth 1, colsample 0.7, strong regularisation",4,0.9010928445452255
+3-grid,boosting,"depth 1, colsample 0.7, strong regularisation",5,0.907423154446964
+3-grid,boosting,"depth 1, colsample 0.7, strong regularisation",6,0.8947310405643739
+3-grid,boosting,"depth 1, colsample 0.7, strong regularisation",7,0.8802910052910052
+3-grid,boosting,"depth 1, colsample 0.7, strong regularisation",8,0.9099426807760141
+3-grid,boosting,"depth 1, colsample 0.7, strong regularisation",9,0.9102418745275888
+3-grid,boosting,"depth 2, colsample 0.3, weak regularisation",0,0.9161627614008566
+3-grid,boosting,"depth 2, colsample 0.3, weak regularisation",1,0.9029509952128998
+3-grid,boosting,"depth 2, colsample 0.3, weak regularisation",2,0.9026203073822122
+3-grid,boosting,"depth 2, colsample 0.3, weak regularisation",3,0.9206664147140339
+3-grid,boosting,"depth 2, colsample 0.3, weak regularisation",4,0.9079270597127739
+3-grid,boosting,"depth 2, colsample 0.3, weak regularisation",5,0.9158320735701688
+3-grid,boosting,"depth 2, colsample 0.3, weak regularisation",6,0.9017384731670447
+3-grid,boosting,"depth 2, colsample 0.3, weak regularisation",7,0.8883534895439658
+3-grid,boosting,"depth 2, colsample 0.3, weak regularisation",8,0.9153754094230284
+3-grid,boosting,"depth 2, colsample 0.3, weak regularisation",9,0.9212648022171831
+3-grid,boosting,"depth 2, colsample 0.3, strong regularisation",0,0.9163832199546486
+3-grid,boosting,"depth 2, colsample 0.3, strong regularisation",1,0.8965576971529352
+3-grid,boosting,"depth 2, colsample 0.3, strong regularisation",2,0.9013447971781305
+3-grid,boosting,"depth 2, colsample 0.3, strong regularisation",3,0.9199420508944318
+3-grid,boosting,"depth 2, colsample 0.3, strong regularisation",4,0.9112654320987654
+3-grid,boosting,"depth 2, colsample 0.3, strong regularisation",5,0.9158005794910555
+3-grid,boosting,"depth 2, colsample 0.3, strong regularisation",6,0.9026675485008819
+3-grid,boosting,"depth 2, colsample 0.3, strong regularisation",7,0.8855820105820107
+3-grid,boosting,"depth 2, colsample 0.3, strong regularisation",8,0.9170760896951372
+3-grid,boosting,"depth 2, colsample 0.3, strong regularisation",9,0.9212805492567397
+3-grid,boosting,"depth 2, colsample 0.7, weak regularisation",0,0.9179736709498615
+3-grid,boosting,"depth 2, colsample 0.7, weak regularisation",1,0.9016124968505921
+3-grid,boosting,"depth 2, colsample 0.7, weak regularisation",2,0.9072656840513983
+3-grid,boosting,"depth 2, colsample 0.7, weak regularisation",3,0.9229812295288485
+3-grid,boosting,"depth 2, colsample 0.7, weak regularisation",4,0.9074389014865206
+3-grid,boosting,"depth 2, colsample 0.7, weak regularisation",5,0.9157060972537163
+3-grid,boosting,"depth 2, colsample 0.7, weak regularisation",6,0.8986520534139582
+3-grid,boosting,"depth 2, colsample 0.7, weak regularisation",7,0.8879283194759385
+3-grid,boosting,"depth 2, colsample 0.7, weak regularisation",8,0.9163359788359788
+3-grid,boosting,"depth 2, colsample 0.7, weak regularisation",9,0.9228552532123961
+3-grid,boosting,"depth 2, colsample 0.7, strong regularisation",0,0.914525069286974
+3-grid,boosting,"depth 2, colsample 0.7, strong regularisation",1,0.8989040060468632
+3-grid,boosting,"depth 2, colsample 0.7, strong regularisation",2,0.9037855883093978
+3-grid,boosting,"depth 2, colsample 0.7, strong regularisation",3,0.9196428571428572
+3-grid,boosting,"depth 2, colsample 0.7, strong regularisation",4,0.9093757873519778
+3-grid,boosting,"depth 2, colsample 0.7, strong regularisation",5,0.9136589821113631
+3-grid,boosting,"depth 2, colsample 0.7, strong regularisation",6,0.8984158478206097
+3-grid,boosting,"depth 2, colsample 0.7, strong regularisation",7,0.8873299319727891
+3-grid,boosting,"depth 2, colsample 0.7, strong regularisation",8,0.9187137818090199
+3-grid,boosting,"depth 2, colsample 0.7, strong regularisation",9,0.9172178130511464
+3-grid,boosting,"depth 3, colsample 0.3, weak regularisation",0,0.923973293020912
+3-grid,boosting,"depth 3, colsample 0.3, weak regularisation",1,0.9036911060720584
+3-grid,boosting,"depth 3, colsample 0.3, weak regularisation",2,0.9061476442428823
+3-grid,boosting,"depth 3, colsample 0.3, weak regularisation",3,0.9233906525573192
+3-grid,boosting,"depth 3, colsample 0.3, weak regularisation",4,0.9140684051398337
+3-grid,boosting,"depth 3, colsample 0.3, weak regularisation",5,0.9207451499118166
+3-grid,boosting,"depth 3, colsample 0.3, weak regularisation",6,0.9077695893172084
+3-grid,boosting,"depth 3, colsample 0.3, weak regularisation",7,0.8903218694885362
+3-grid,boosting,"depth 3, colsample 0.3, weak regularisation",8,0.9208553791887124
+3-grid,boosting,"depth 3, colsample 0.3, weak regularisation",9,0.9265085663895187
+3-grid,boosting,"depth 3, colsample 0.3, strong regularisation",0,0.9217057193247669
+3-grid,boosting,"depth 3, colsample 0.3, strong regularisation",1,0.8995811287477954
+3-grid,boosting,"depth 3, colsample 0.3, strong regularisation",2,0.9063995968757872
+3-grid,boosting,"depth 3, colsample 0.3, strong regularisation",3,0.9227765180146132
+3-grid,boosting,"depth 3, colsample 0.3, strong regularisation",4,0.915501385739481
+3-grid,boosting,"depth 3, colsample 0.3, strong regularisation",5,0.9164619551524312
+3-grid,boosting,"depth 3, colsample 0.3, strong regularisation",6,0.9049036281179137
+3-grid,boosting,"depth 3, colsample 0.3, strong regularisation",7,0.8897392290249433
+3-grid,boosting,"depth 3, colsample 0.3, strong regularisation",8,0.9229812295288486
+3-grid,boosting,"depth 3, colsample 0.3, strong regularisation",9,0.9243512219702694
+3-grid,boosting,"depth 3, colsample 0.7, weak regularisation",0,0.9209341143864953
+3-grid,boosting,"depth 3, colsample 0.7, weak regularisation",1,0.9054547745023935
+3-grid,boosting,"depth 3, colsample 0.7, weak regularisation",2,0.9086986646510455
+3-grid,boosting,"depth 3, colsample 0.7, weak regularisation",3,0.9253905265810027
+3-grid,boosting,"depth 3, colsample 0.7, weak regularisation",4,0.9119268077601411
+3-grid,boosting,"depth 3, colsample 0.7, weak regularisation",5,0.9200522801713277
+3-grid,boosting,"depth 3, colsample 0.7, weak regularisation",6,0.9059586797682035
+3-grid,boosting,"depth 3, colsample 0.7, weak regularisation",7,0.8922587553539933
+3-grid,boosting,"depth 3, colsample 0.7, weak regularisation",8,0.9209183673469388
+3-grid,boosting,"depth 3, colsample 0.7, weak regularisation",9,0.925091332829428
+3-grid,boosting,"depth 3, colsample 0.7, strong regularisation",0,0.9208553791887125
+3-grid,boosting,"depth 3, colsample 0.7, strong regularisation",1,0.8995181405895691
+3-grid,boosting,"depth 3, colsample 0.7, strong regularisation",2,0.9061476442428823
+3-grid,boosting,"depth 3, colsample 0.7, strong regularisation",3,0.9215797430083144
+3-grid,boosting,"depth 3, colsample 0.7, strong regularisation",4,0.9148715041572183
+3-grid,boosting,"depth 3, colsample 0.7, strong regularisation",5,0.9168871252204586
+3-grid,boosting,"depth 3, colsample 0.7, strong regularisation",6,0.906415343915344
+3-grid,boosting,"depth 3, colsample 0.7, strong regularisation",7,0.8893927941546989
+3-grid,boosting,"depth 3, colsample 0.7, strong regularisation",8,0.9215482489292014
+3-grid,boosting,"depth 3, colsample 0.7, strong regularisation",9,0.9218946837994457
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw]",0,0.7736363063744016
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw]",1,0.7502755731922399
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw]",2,0.7660383597883598
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw]",3,0.7748330813807004
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw]",4,0.7695814436885865
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw]",5,0.7444412950365331
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw]",6,0.7583695515243134
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw]",7,0.748102481733434
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw]",8,0.763810153691106
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw]",9,0.7739591206853113
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw, monotone]",0,0.7203955656336609
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw, monotone]",1,0.6970978206097254
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw, monotone]",2,0.6950821995464853
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw, monotone]",3,0.7312216553287982
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw, monotone]",4,0.7197026958931722
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw, monotone]",5,0.7267101284958429
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw, monotone]",6,0.7110182035777273
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw, monotone]",7,0.6967828798185941
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw, monotone]",8,0.7165532879818594
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw, monotone]",9,0.7233796296296297
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw+summaries]",0,0.8174130763416478
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw+summaries]",1,0.8182476694381456
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw+summaries]",2,0.8334986772486773
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw+summaries]",3,0.801154257999496
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw+summaries]",4,0.8088545603426555
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw+summaries]",5,0.7953593474426809
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw+summaries]",6,0.8078861174099269
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw+summaries]",7,0.7815964348702444
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw+summaries]",8,0.8179012345679012
+4-feature-recheck,tree,"depth 6, leaf 30, ccp 0.0 [raw+summaries]",9,0.8104528848576467
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw, monotone]",0,0.87399218946838
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw, monotone]",1,0.8639613252708491
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw, monotone]",2,0.8562767699672462
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw, monotone]",3,0.892888636936256
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw, monotone]",4,0.8802437641723356
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw, monotone]",5,0.8714726631393298
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw, monotone]",6,0.8644652305366591
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw, monotone]",7,0.8497732426303855
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw, monotone]",8,0.8827003023431593
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw, monotone]",9,0.9028565129755607
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries]",0,0.9045808138070043
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries]",1,0.8984867094986142
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries]",2,0.8860780423280423
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries]",3,0.9048642605190225
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries]",4,0.8980536659108088
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries]",5,0.892022549760645
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries]",6,0.8916446208112875
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries]",7,0.8771258503401361
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries]",8,0.9054783950617284
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries]",9,0.9139896699420509
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries, monotone]",0,0.8599930713025951
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries, monotone]",1,0.85671768707483
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries, monotone]",2,0.8445924666162761
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries, monotone]",3,0.8806531872008062
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries, monotone]",4,0.8660399344923155
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries, monotone]",5,0.8623551272360798
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries, monotone]",6,0.852922650541698
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries, monotone]",7,0.8423563869992441
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries, monotone]",8,0.8658982111363064
+4-feature-recheck,forest,"et, max_features 0.2, depth None, leaf 1 [raw+summaries, monotone]",9,0.8817554799697657
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw, monotone]",0,0.9039745527840766
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw, monotone]",1,0.8833616780045352
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw, monotone]",2,0.8856449987402368
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw, monotone]",3,0.9077223481985387
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw, monotone]",4,0.8949829931972788
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw, monotone]",5,0.8981796422272612
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw, monotone]",6,0.8919438145628622
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw, monotone]",7,0.8762912572436381
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw, monotone]",8,0.8973450491307633
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw, monotone]",9,0.912257495590829
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries]",0,0.9218002015621062
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries]",1,0.9048091458805745
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries]",2,0.9083522297808012
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries]",3,0.9249496094734191
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries]",4,0.9132653061224489
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries]",5,0.9202097505668935
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries]",6,0.9072814310909549
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries]",7,0.8914871504157218
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries]",8,0.9235638699924414
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries]",9,0.9264140841521795
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries, monotone]",0,0.8949987402368355
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries, monotone]",1,0.8829050138573948
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries, monotone]",2,0.8827790375409423
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries, monotone]",3,0.910918997228521
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries, monotone]",4,0.8905895691609977
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries, monotone]",5,0.891628873771731
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries, monotone]",6,0.8830624842529604
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries, monotone]",7,0.8736615016376923
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries, monotone]",8,0.8937547241118668
+4-feature-recheck,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries, monotone]",9,0.9117063492063492
+5-seeds,forest,"et, max_features 0.2, depth None, leaf 1 x5 seeds",0,0.9126590450995213
+5-seeds,forest,"et, max_features 0.2, depth None, leaf 1 x5 seeds",1,0.9007306626354246
+5-seeds,forest,"et, max_features 0.2, depth None, leaf 1 x5 seeds",2,0.8912273242630385
+5-seeds,forest,"et, max_features 0.2, depth None, leaf 1 x5 seeds",3,0.9143361048122953
+5-seeds,forest,"et, max_features 0.2, depth None, leaf 1 x5 seeds",4,0.9007779037540943
+5-seeds,forest,"et, max_features 0.2, depth None, leaf 1 x5 seeds",5,0.9045020786092214
+5-seeds,forest,"et, max_features 0.2, depth None, leaf 1 x5 seeds",6,0.8926288107835727
+5-seeds,forest,"et, max_features 0.2, depth None, leaf 1 x5 seeds",7,0.8850308641975309
+5-seeds,forest,"et, max_features 0.2, depth None, leaf 1 x5 seeds",8,0.9110528470647519
+5-seeds,forest,"et, max_features 0.2, depth None, leaf 1 x5 seeds",9,0.9222174981103552
+5-seeds,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",0,0.9227607709750567
+5-seeds,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",1,0.909155328798186
+5-seeds,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",2,0.9104780801209372
+5-seeds,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",3,0.924949609473419
+5-seeds,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",4,0.9155643738977072
+5-seeds,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",5,0.922209624590577
+5-seeds,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",6,0.906194885361552
+5-seeds,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",7,0.8930933484504913
+5-seeds,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",8,0.9245244394053918
+5-seeds,boosting,"depth 3, colsample 0.3, weak regularisation [raw+summaries] x5 seeds",9,0.9269179894179894
+5-ensemble,ensemble,equal-weight forest + boosting probabilities,0,0.9224615772234819
+5-ensemble,ensemble,equal-weight forest + boosting probabilities,1,0.9094230284706475
+5-ensemble,ensemble,equal-weight forest + boosting probabilities,2,0.9074074074074073
+5-ensemble,ensemble,equal-weight forest + boosting probabilities,3,0.9252645502645502
+5-ensemble,ensemble,equal-weight forest + boosting probabilities,4,0.9149029982363315
+5-ensemble,ensemble,equal-weight forest + boosting probabilities,5,0.9183043587805493
+5-ensemble,ensemble,equal-weight forest + boosting probabilities,6,0.9046201814058957
+5-ensemble,ensemble,equal-weight forest + boosting probabilities,7,0.8930146132527085
+5-ensemble,ensemble,equal-weight forest + boosting probabilities,8,0.9221938775510204
+5-ensemble,ensemble,equal-weight forest + boosting probabilities,9,0.9299414210128496
